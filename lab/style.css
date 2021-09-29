@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+}
+
+nav{
+    box-sizing: content-box;
+    width: 100%;
+    min-width: 100%;
+    min-height: 10%;
+    background-color: blue;
+    padding: 2% 0;
+}
+
+nav p{
+    margin-left: 2%;
+}
+
+#main{
+    width: 100%;
+    background-color: orchid;
+}
+
+#cuatroPartes{
+    width: 100%;
+    background-color: orange;
+    float: left;
+    display: flex;
+}
+
+#tresPartes{
+    width: 50%;
+    float: left;
+    background-color: pink;
+    min-height: 100%;
+}
+
+#fotoGrande{
+    width: 50%;
+    float: left;
+    display: flex;
+}
+
+#fotoGrande img{
+    width: 100%;
+}
+
+#textoRectangulo{
+    width: 100%;
+    background-color: green;
+    float: left;
+    text-align: center;
+    min-height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#textoRectangulo p{
+    margin: auto 5%;
+}
+
+#fotoPeque{
+    width: 50%;
+    float: left;
+    display: flex;
+    min-height: 50%;
+}
+
+#fotoPeque img{
+    width: 100%;
+}
+
+#textoPeque{
+    width: 50%;
+    float: left;
+    background-color: red;
+    text-align: center;
+    min-height: 50%;
+    max-height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#textoPeque p{
+    margin: auto 10%;
+    max-height: 50%;
+    display: flex;
+    
+}
+
