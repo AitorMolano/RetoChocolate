@@ -44,7 +44,7 @@ header{
 
 footer{
     width: 100%;
-    height: 5em;
+    height: 4em;
     background-color: black;
     display: inline-block;
     padding: 5px;
@@ -67,7 +67,6 @@ footer p{
     display: none;
     padding: 0.8em;
     height: 60%;
-    min-width: 15%;
     margin: 15px;
     float: right;
 }
@@ -76,8 +75,6 @@ footer p{
     float: right;
     padding: 0.8em;
 }
-
-
 
 #menu{
     width: 4%;
@@ -88,14 +85,183 @@ footer p{
 nav{
     box-sizing: content-box;
     width: 100%;
-    min-width: 100%;
     min-height: 10%;
     background-color: #F3E5AB ;
     background-image: linear-gradient(#F3E5AB, #614015);
 
 }
 
-#main{
+
+@media screen and (max-width : 490px){ 
+    header{
+        display: block;
+    }
+    #main img{
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        height: 100px;
+    }
+    #menu{
+        display: none;
+    }
+    #logo{
+        float: left;  
+    }
+    #login{
+        display: none;
+    }
+    #usuario{
+        display: block;
+    }
+    #main{
+        width: 100%;
+    }
+    #tresPartes{
+        float: left;
+        width: 100%;
+    }
+    #fotoGrande{
+        display: inline-block;
+    }
+    #fotoPeque{
+        margin-top: 100px;
+
+    }
+    p{
+        text-align: center;
+    }
+    footer{
+        padding: 0;
+    }
+    footer p{
+        margin: 10px;
+    }
+    #textoRectangulo{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width : 980px) and (min-width :  490px){ 
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: content-box;
+    }
+    
+    body{
+        width: 100%;
+    }
+    
+    header{
+        width: 100%;
+    }
+    
+    
+    #logo{
+        padding: 0.8em;
+        height: 100%;
+        width: 20%;
+        margin: auto;
+        display: block;
+    
+    }
+    
+    #login{
+        float: right;
+        padding: 0.8em;
+    }
+    
+    #menu{
+        width: 4%;
+        padding: 0.8em;
+        float: left;
+    }
+    
+    nav{
+        box-sizing: content-box;
+        width: 100%;
+        min-width: 100%;
+        min-height: 10%;
+        background-color: #F3E5AB ;
+        background-image: linear-gradient(#F3E5AB, #614015);
+    
+    }
+    
+    
+    #main{
+        width: 100%;
+        background-color: orchid;
+    }
+    
+    #cuatroPartes{
+        width: 100%;
+        background-color: orange;
+        display: flex;
+    }
+    
+    #tresPartes{
+        width: 100%;
+        background-color: pink;
+        min-height: 100%;
+    }
+    
+    #fotoGrande{
+        width: 100%;
+        display: flex;
+    
+    }
+    
+    #fotoGrande img{
+        width: 100%;
+    
+    }
+    
+    #textoRectangulo{
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.2em solid #6B000E;
+    }
+    
+    #textoRectangulo p{
+        margin: auto 5%;
+    }
+    
+    #fotoPeque{
+        width: 100%;
+        display: flex;
+    
+    }
+    
+    #fotoPeque img{
+        width: 100%;
+    }
+    
+    #textoPeque{
+        width: 100%;
+        float: left;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    #textoPeque p{
+        margin: auto 10%;
+        display: flex;
+        
+    }
+}
+
+    @media screen and (min-width: 980px){
+
+        #main{
     width: 100%;
     background-color: orchid;
 }
@@ -242,149 +408,4 @@ nav{
     
 }
 
-@media screen and (max-width : 490px){ 
-    header{
-        display: block;
     }
-    nav{
-        position: fixed;
-        height: 100px;
-    }
-    #menu{
-        display: none;
-    }
-    #logo{
-        float: left;  
-    }
-    #login{
-        display: none;
-    }
-    #usuario{
-        display: block;
-    }
-
-    body{
-        width: 100%;
-    }
-    #tresPartes{
-        float: right;
-    }
-    #fotoGrande{
-        float: left;
-    }
-}
-
-@media screen and (max-width : 980px) and (min-width :  490px){ 
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-    }
-    
-    body{
-        width: 100%;
-    }
-    
-    header{
-        width: 100%;
-    }
-    
-    
-    #logo{
-        padding: 0.8em;
-        height: 100%;
-        width: 20%;
-        margin: auto;
-        display: block;
-    
-    }
-    
-    #login{
-        float: right;
-        padding: 0.8em;
-    }
-    
-    #menu{
-        width: 4%;
-        padding: 0.8em;
-        float: left;
-    }
-    
-    nav{
-        box-sizing: content-box;
-        width: 100%;
-        min-width: 100%;
-        min-height: 10%;
-        background-color: #F3E5AB ;
-        background-image: linear-gradient(#F3E5AB, #614015);
-    
-    }
-    
-    
-    #main{
-        width: 100%;
-        background-color: orchid;
-    }
-    
-    #cuatroPartes{
-        width: 100%;
-        background-color: orange;
-        display: flex;
-    }
-    
-    #tresPartes{
-        width: 100%;
-        background-color: pink;
-        min-height: 100%;
-    }
-    
-    #fotoGrande{
-        width: 100%;
-        display: flex;
-    
-    }
-    
-    #fotoGrande img{
-        width: 100%;
-    
-    }
-    
-    #textoRectangulo{
-        width: 100%;
-        background-color: white;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        border-bottom: 0.2em solid #6B000E;
-    }
-    
-    #textoRectangulo p{
-        margin: auto 5%;
-    }
-    
-    #fotoPeque{
-        width: 100%;
-        display: flex;
-    
-    }
-    
-    #fotoPeque img{
-        width: 100%;
-    }
-    
-    #textoPeque{
-        width: 100%;
-        float: left;
-        background-color: white;
-        text-align: center;
-        display: flex;
-        align-items: center;
-    
-    }
-    
-    #textoPeque p{
-        margin: auto 10%;
-        display: flex;
-        
-    }
-}
