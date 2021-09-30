@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+    font-family: 'Nonite';
 }
 
 body{
@@ -97,3 +98,85 @@ nav p{
     
 }
 
+/*--- CONTROLADOR -----------------------------------*/
+
+#controlador{
+    display: block;
+    width: 100%;
+    background-color: chocolate;
+    float: left;
+}
+
+#marcoLuces{
+    display: grid;
+    width: 96%;
+    background-color: darkgreen;
+    float: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2%;
+    text-align: center;
+}
+
+#botonRojo{
+    background-color: red;
+}
+
+#botonAmarillo{
+    background-color: yellow;
+}
+
+#botonVerde{
+    background-color: green;
+}
+
+#botonAzul{
+    background-color: blue;
+}
+
+#contCuadros{
+    display: grid;
+    width: 96%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    padding: 2%;
+}
+
+#tableta{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#marcobotones{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.conCuadrados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding: 2%;
+}
+
+.cuboBasico{
+    display: block;
+}
+
+.cuboBasico img{
+    width: 100%;
+    height: 100%;
+}
+
+/*
+.luz{
+    width: 21%;
+    display: block;
+    padding: 2%;
+    margin: 0 auto;
+    background-color: blue;
+    float: left;
+    align-items: center;
+}
+*/
