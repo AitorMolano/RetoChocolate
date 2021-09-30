@@ -46,8 +46,32 @@ footer p {
 #login{
     padding: 0.8em;
     float: right;
+    height: 100%;
 }
 
+#login label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid black;
+    width: 80%;
+    outline: 0;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+
+}
+
+#login label input::placeholder{
+    color: black;
+}
+
+#login input{
+    background: lightgrey;
+    border: 0.2em solid black;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 80%;
+}
 
 
 #menu{
@@ -63,7 +87,7 @@ nav{
     min-height: 10%;
     background-color: #F3E5AB ;
     background-image: linear-gradient(#F3E5AB, #614015);
-
+    position: fixed;
 }
 
 
@@ -73,6 +97,7 @@ nav{
 }
 
 #cuatroPartes{
+    margin-top: 20%;
     width: 100%;
     background-color: orange;
     float: left;
@@ -106,7 +131,7 @@ nav{
     min-height: 50%;
     display: flex;
     align-items: center;
-    border-bottom: 0.2em solid #6B000E;
+    border-bottom: 0.5em solid #6B000E;
 }
 
 #textoRectangulo p{
@@ -148,7 +173,7 @@ nav{
     width: 100%;
     float: left;
     display: flex;
-    border-top:0.2em solid #6B000E ;
+    border-top:0.5em solid #6B000E ;
 }
 
 #fotoGrande2{
@@ -176,7 +201,7 @@ nav{
     min-height: 50%;
     display: flex;
     align-items: center;
-    border-bottom: 0.2em solid #6B000E;
+    border-bottom: 0.5em solid #6B000E;
 }
 
 #textoRectangulo2 p{
@@ -219,7 +244,7 @@ nav{
     width: 100%;
     float: left;
     display: flex;
-    border-top:0.2em solid #6B000E ;
+    border-top:0.5em solid #6B000E ;
 }
 
 #chocolates img{
@@ -233,7 +258,7 @@ nav{
     min-height: 50%;
     display: flex;
     align-items: center;
-    border-top:0.2em solid #6B000E ;
+    border-top:0.5em solid #6B000E ;
 }
 
 #maquina p {
@@ -241,7 +266,7 @@ nav{
 }
 
 #formulario{
-    border-top:0.2em solid #6B000E ;
+    border-top:0.5em solid #6B000E ;
     padding: 2em;
     padding-left: 12em;
     padding-right: 12em;
@@ -280,117 +305,6 @@ nav{
 }
 
 @media screen and (max-width : 980px){ 
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: content-box;
-    }
-    
-    body{
-        width: 100%;
-    }
-    
-    header{
-        width: 100%;
-    }
-    
-    
-    #logo{
-        padding: 0.8em;
-        height: 100%;
-        width: 20%;
-        margin: auto;
-        display: block;
-    
-    }
-    
-    #login{
-        float: right;
-        padding: 0.8em;
-    }
-    
-    #menu{
-        width: 4%;
-        padding: 0.8em;
-        float: left;
-    }
-    
-    nav{
-        box-sizing: content-box;
-        width: 100%;
-        min-width: 100%;
-        min-height: 10%;
-        background-color: #F3E5AB ;
-        background-image: linear-gradient(#F3E5AB, #614015);
-    
-    }
-    
-    
-    #main{
-        width: 100%;
-        background-color: orchid;
-    }
-    
-    #cuatroPartes{
-        width: 100%;
-        background-color: orange;
-        display: flex;
-    }
-    
-    #tresPartes{
-        width: 100%;
-        background-color: pink;
-        min-height: 100%;
-    }
-    
-    #fotoGrande{
-        width: 100%;
-        display: flex;
-    
-    }
-    
-    #fotoGrande img{
-        width: 100%;
-    
-    }
-    
-    #textoRectangulo{
-        width: 100%;
-        background-color: white;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        border-bottom: 0.2em solid #6B000E;
-    }
-    
-    #textoRectangulo p{
-        margin: auto 5%;
-    }
-    
-    #fotoPeque{
-        width: 100%;
-        display: flex;
-    
-    }
-    
-    #fotoPeque img{
-        width: 100%;
-    }
-    
-    #textoPeque{
-        width: 100%;
-        float: left;
-        background-color: white;
-        text-align: center;
-        display: flex;
-        align-items: center;
-    
-    }
-    
-    #textoPeque p{
-        margin: auto 10%;
-        display: flex;
-        
-    }
+   
 }
 
