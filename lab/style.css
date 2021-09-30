@@ -269,6 +269,16 @@ nav{
     padding: 1em;
 }
 
+#mapa{
+    background-color: white;
+    padding-left: 15em;
+    padding-right: 15em;
+    text-align: center;
+}
+#mapa iframe{
+    padding: 0.5em;
+}
+
 @media screen and (max-width : 980px){ 
     *{
         padding: 0;
