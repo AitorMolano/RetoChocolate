@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <img src="menu.png" alt="menu" id="menu" onclick="">
+            <img src="menu.png" alt="menu" id="menu" onclick="mostrar()">
             <div id="login">
                 <p id="titulos">Login de Usuario</p>
                 <label>
@@ -22,6 +22,24 @@
             <img src="logochoco2.png" alt="foro" id="logo">
         </nav>
     </header>
+    <div id="menu-vertical">
+        <input id ="menu__toggle" type="checkbox" class='menu__toggle'/>
+        <label for="menu__toggle" class="menu__toggle-label">
+          <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
+            <path d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' />
+          </svg>
+          <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
+            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+          </svg>
+        </label>
+        <ol class='menu__content'>
+          <li class="menu-item"><a href="#0">Inicio</a></li>
+          <li class="menu-item"><a href="#0">Quienes somos</a></li>
+          <li class="menu-item"><a href="#0">Chocolates</a></li>
+          <li class="menu-item"><a href="#0">Maquina</a></li>
+          <li class="menu-item"><a href="#0">Contact</a></li>
+        </ol>
+    </div>
     <div id="main">
         <div id="cuatroPartes">
             <div id="tresPartes">
@@ -314,5 +332,6 @@
     <footer>
         <p>@Copyright</p>
     </footer>
+    <script src="javascript.js"></script>
 </body>
 </html>
