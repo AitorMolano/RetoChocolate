@@ -55,6 +55,153 @@ footer p{
     text-align: center;
 }
 
+/*Imagenes completas*/
+#chocolates{
+    width: 100%;
+    height: 10%;
+}
+
+#chocolates img{
+    width: 100%;
+}
+
+/*Controlador*/
+#controlador{
+    display: block;
+    width: 100%;
+    background-color: chocolate;
+    float: left;
+    border-top:0.5em solid #6B000E ;
+    border-bottom:0.5em solid #6B000E ;
+    margin-bottom: 2em;
+}
+
+#marcoLuces{
+    display: grid;
+    width: 96%;
+    background-color: darkgreen;
+    float: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2%;
+    text-align: center;
+}
+
+#botonRojo{
+    background-color: red;
+    width: 8em;
+    height:8em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: 40%;
+}
+
+
+#botonAmarillo{
+    background-color: yellow;
+    width: 8em;
+    height:8em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: 20%;
+}
+
+#botonVerde{
+    background-color: green;
+    width: 8em;
+    height:8em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: 20%;
+}
+
+#botonAzul{
+    background-color: blue;
+    width: 8em;
+    height:8em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: 20%;
+}
+
+#contCuadros{
+    display: grid;
+    width: 96%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    padding: 2%;
+}
+
+#tableta{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#marcobotones{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.conCuadrados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding: 2%;
+}
+
+.cuboBasico{
+    display: block;
+}
+
+.cuboBasico img{
+    width: 100%;
+    height: 100%;
+}
+
+#formulario{
+    padding: 2em;
+    padding-left: 12em;
+    padding-right: 12em;
+    background-color: white;
+
+}
+
+
+#formulario label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid gray;
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    outline: 0;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+#formulario input{
+    background: lightgrey;
+    border: 0.2em solid gray;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+#mapa{
+    background-color: white;
+    padding-left: 15em;
+    padding-right: 15em;
+    text-align: center;
+}
+#mapa iframe{
+    padding: 0.5em;
+}
+
 #usuario{
     display: none;
     padding: 0.8em;
@@ -64,8 +211,36 @@ footer p{
 }
 
 #login{
-    float: right;
     padding: 0.8em;
+    float: right;
+    height: 100%;
+    max-width: 20%;
+
+}
+
+#login label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid black;
+    width: 80%;
+    outline: 0;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+
+}
+
+#login label input::placeholder{
+    color: black;
+}
+
+#login input{
+    background: lightgrey;
+    border: 0.2em solid black;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 80%;
+
 }
 
 #menu{
@@ -300,9 +475,9 @@ nav{
 
 #logo{
     padding: 0.8em;
-    height: 100%;
-    min-width: 20%;
-    margin: auto;
+    height: 170px;
+    max-width: 20%;
+    margin: 0 auto;
     display: block;
 }
 
