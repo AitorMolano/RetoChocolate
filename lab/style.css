@@ -58,28 +58,29 @@ footer p{
 /*Imagenes completas*/
 #chocolates{
     width: 100%;
-    height: 10%;
+    height: 100%;
+    border-bottom:0.5em solid #6B000E;
 }
 
 #chocolates img{
     width: 100%;
+
 }
 
 /*Controlador*/
 #controlador{
     display: block;
     width: 100%;
-    background-color: chocolate;
     float: left;
-    border-top:0.5em solid #6B000E ;
-    border-bottom:0.5em solid #6B000E ;
+    border-bottom:0.5em solid #6B000E;
     margin-bottom: 2em;
 }
 
 #marcoLuces{
     display: grid;
     width: 96%;
-    background-color: darkgreen;
+    background-color: #F3E5AB;
+    border-bottom:0.5em solid #6B000E;
     float: left;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -89,43 +90,18 @@ footer p{
 
 #botonRojo{
     background-color: red;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 40%;
 }
-
 
 #botonAmarillo{
     background-color: yellow;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 20%;
 }
 
 #botonVerde{
     background-color: green;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 20%;
 }
 
 #botonAzul{
     background-color: blue;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 20%;
 }
 
 #contCuadros{
@@ -140,6 +116,20 @@ footer p{
 #tableta{
     grid-column: 1;
     grid-row: 1;
+}
+
+.conInterfaz{
+    display: block;
+    min-width: 46%;
+    float: left;
+    padding: 2%;
+}
+
+.conInterfaz h4{
+    display: block;
+    min-width: 55%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 28;
 }
 
 #marcobotones{
@@ -162,6 +152,34 @@ footer p{
     width: 100%;
     height: 100%;
 }
+
+#botonesMaster{
+    display: flex;
+    float: left;
+    background-color: #F3E5AB ;
+    width: 100%;
+    border-top: 0.5em solid #6B000E;
+}
+
+#conOnOff{
+    float: left;
+    padding: 2%;
+    margin-left: 10%;
+}
+
+#conOnOff label input{
+    width: 150%;
+    height: 150%;
+}
+
+#conControl{
+    display: flex;
+    float: left;
+    background-color: #E6CC5D;
+    margin-left: auto;
+}
+
+/*Contacto*/
 
 #formulario{
     padding: 2em;
@@ -315,7 +333,32 @@ nav{
     #textoRectangulo{
         display: none;
     }
-
+    #mapa{
+        padding: 0;
+        max-width: 100%;
+    }
+    #formulario{
+        padding: 30px;
+    }
+    iframe{
+        max-width: 100%;
+        padding: 0;
+    }
+    #contCuadros{
+        display: block;
+    }
+    #tableta{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+        display: block;
+    }
+    #touchPad{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+        display: block;
+    }
 }
 
 /*----------RESOLUCIÓN TABLET-------------*/
@@ -453,6 +496,13 @@ nav{
         margin: auto 5%;
     }
 
+    #mapa{
+        padding: 0;
+    }
+    #formulario{
+        padding: 30px;
+    }
+
 
     #fotoPeque{
         display: none;
@@ -498,6 +548,7 @@ nav{
     float: left;
     background-color: pink;
     min-height: 100%;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #fotoGrande{
@@ -561,6 +612,7 @@ nav{
     background-color: orange;
     float: left;
     display: flex;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #fotoGrande2{
@@ -574,6 +626,7 @@ nav{
     float: right;
     background-color: pink;
     min-height: 100%;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #fotoGrande2 img{
