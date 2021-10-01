@@ -1,4 +1,4 @@
-function mostrar() {
+function mostrar(x) {
     document.getElementById("menu-vertical").style.width = "30%";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "none";
