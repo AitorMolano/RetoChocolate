@@ -1,54 +1,230 @@
+/*Fuentes a importar*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: content-box;
-
+    font-size: 13px;
+    font-family: Conforta;
 }
 
 body{
     width: 100%;
-    font-size: 100%;;
-    font-family: Confortaa;
+}
+/*Fuentes*/
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 28;
 }
 
 p{
-    font-size: 0.8125em;
-}
- 
-#titulos{
-    font-size: 1.38461538em ;
+    font-family: "Comfortaa";
+    font-size: 13;
 }
 
+a:link{
+    color: #008EAB;
+    font-family: "Comfortaa";
+    font-size: 13;
+}
+
+a:hover{
+    font-family: "Comfortaa";
+    font-weight: bold;
+}
+
+a:visited{
+    color: #BC001A;
+}
+/*Fin de fuentes*/
 header{
     width: 100%;
-    max-height: 20%;
-}
-
-
-nav{
-    width: 100%;
-    height: 18%;
-    overflow:hidden;
 }
 
 footer{
     width: 100%;
+    height: 4em;
     background-color: black;
+    display: inline-block;
+    padding: 5px;
+}
+
+footer p{
     color: white;
-    clear: both;
+    text-align: center;
 }
 
-footer p {
-    padding: 0.8%;
-}
-
-#logo{
-    padding: 0.8em;
+/*Imagenes completas*/
+#chocolates{
+    width: 100%;
     height: 100%;
-    width: 15%;
-    margin: 0 40%;
+    border-bottom:0.5em solid #6B000E;
+}
+
+#chocolates img{
+    width: 100%;
+
+}
+/*Controlador*/
+#controlador{
     display: block;
-    
+    width: 100%;
+    float: left;
+    border-bottom:0.5em solid #6B000E;
+    margin-bottom: 2em;
+}
+
+#marcoLuces{
+    display: grid;
+    width: 96%;
+    background-color: #F3E5AB;
+    border-bottom:0.5em solid #6B000E;
+    float: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2%;
+    text-align: center;
+}
+
+#botonRojo{
+    background-color: red;
+}
+
+#botonAmarillo{
+    background-color: yellow;
+}
+
+#botonVerde{
+    background-color: green;
+}
+
+#botonAzul{
+    background-color: blue;
+}
+
+#contCuadros{
+    display: grid;
+    width: 96%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    padding: 2%;
+}
+
+#tableta{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.conInterfaz{
+    display: block;
+    min-width: 46%;
+    float: left;
+    padding: 2%;
+}
+
+.conInterfaz h4{
+    display: block;
+    min-width: 55%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 28;
+}
+
+#marcobotones{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.conCuadrados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding: 2%;
+}
+
+.cuboBasico{
+    display: block;
+}
+
+.cuboBasico img{
+    width: 100%;
+    height: 100%;
+}
+
+#botonesMaster{
+    display: flex;
+    float: left;
+    background-color: #F3E5AB ;
+    width: 100%;
+    border-top: 0.5em solid #6B000E;
+}
+
+#conOnOff{
+    float: left;
+    padding: 2%;
+    margin-left: 10%;
+}
+
+#conOnOff label input{
+    width: 150%;
+    height: 150%;
+}
+
+#conControl{
+    display: flex;
+    float: left;
+    background-color: #E6CC5D;
+    margin-left: auto;
+}
+
+/*Contacto*/
+
+#formulario{
+    padding: 2em;
+    padding-left: 12em;
+    padding-right: 12em;
+    background-color: white;
+
+}
+
+
+#formulario label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid gray;
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    outline: 0;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+#formulario input{
+    background: lightgrey;
+    border: 0.2em solid gray;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+#mapa{
+    background-color: white;
+    padding-left: 15em;
+    padding-right: 15em;
+    text-align: center;
+}
+#mapa iframe{
+    padding: 0.5em;
+}
+
+#usuario{
+    display: none;
+    padding: 0.8em;
+    height: 60%;
+    margin: 15px;
+    float: right;
 }
 
 #login{
@@ -83,7 +259,6 @@ footer p {
     width: 80%;
 
 }
-
 
 #menu{
     width: 4%;
@@ -147,24 +322,287 @@ footer p {
     border-bottom: 0.2em solid white;
 }
 
+
 nav{
     box-sizing: content-box;
     width: 100%;
-    min-width: 100%;
     min-height: 10%;
     background-color: #F3E5AB ;
     background-image: linear-gradient(#F3E5AB, #614015);
-    position: fixed;
+
 }
 
+/*----------RESOLUCIÓN MOBILE-------------*/
 
-#main{
+
+@media screen and (max-width : 490px){ 
+    header{
+        display: block;
+    }
+    #main img{
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        height: 100px;
+    }
+    #menu{
+        display: none;
+    }
+    #logo{
+    padding: 0.8em;
+    height: 100%;
+    min-width: 20%;
+    margin: auto;
+    display: block;
+    float: left;
+}
+    #login{
+        display: none;
+    }
+    #usuario{
+        display: block;
+    }
+    #main{
+        width: 100%;
+    }
+    #tresPartes{
+        float: left;
+        width: 100%;
+    }
+    #fotoGrande{
+        display: inline-block;
+    }
+    #fotoPeque{
+        margin-top: 100px;
+
+    }
+    p{
+        text-align: center;
+    }
+    footer{
+        padding: 0;
+    }
+    footer p{
+        margin: 10px;
+    }
+    #textoRectangulo{
+        display: none;
+    }
+    #mapa{
+        padding: 0;
+        max-width: 100%;
+    }
+    #formulario{
+        padding: 30px;
+    }
+    iframe{
+        max-width: 100%;
+        padding: 0;
+    }
+    #contCuadros{
+        display: block;
+    }
+    #tableta{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+        display: block;
+    }
+    #touchPad{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+        display: block;
+    }
+}
+
+/*----------RESOLUCIÓN TABLET-------------*/
+
+@media screen and (max-width : 980px) and (min-width :  490px){ 
+    body{
+        width: 100%;
+    }
+    
+    header{
+        width: 100%;
+    }
+    
+    footer{
+        padding: 0;
+    }
+    footer p{
+        margin: 10px;
+    }
+
+    nav{
+        box-sizing: content-box;
+        width: 100%;
+        height: 120px;
+        background-color: #F3E5AB ;
+        background-image: linear-gradient(#F3E5AB, #614015);
+        position: fixed;
+        display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 30%;
+          grid-auto-rows: minmax(120px, auto);
+    }
+
+    #logo{
+    padding: 0.8em;
+    height: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    grid-column: 2;
+    }
+    
+    #login{
+        display: none;
+    }
+    
+    #usuario{
+        display: inline-flex;
+        grid-column: 3;
+    }
+
+    #menu{
+        min-width:30%;
+        height: 30%;
+        padding: 0.8em;
+        float: left;
+        grid-column: 1;
+    }
+
+    #menu-vertical  ul, #menu-vertical  li{
+        margin-left: 1.4em;
+
+    }
+
+    #menu-vertical .boton-cerrar {
+        right: 1.4rem;
+       
+    }    
+
+    #main{
+        width: 100%;
+        background-color: orchid;
+        display: block;
+    }
+    
+    #cuatroPartes{
+        width: 100%;
+        background-color: orange;
+        display: flex;
+    }
+    
+    #tresPartes{
+        width: 100%;
+        background-color: pink;
+        min-height: 100%;
+        margin-top: 120px;
+    }
+    #dosPartes{
+        width: 100%;
+        background-color: orange;
+        display: flex;
+    }
+    #fotoGrande{
+        width: 100%;
+        display: flex;
+        margin-top: 120px;
+        height: 100%;
+    }
+    
+    #fotoGrande img{
+        width: 100%;
+    }
+    
+    #textoRectangulo{
+        width: 100%;
+        min-height: 100%;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.2em solid #6B000E;
+    }
+    
+    #textoRectangulo p{
+        margin: auto 5%;
+    }
+
+    #tresPartes2{
+        max-width: 50%;
+        background-color: pink;
+        min-height: 100%;
+    }
+
+    #fotoGrande2{
+        max-width: 50%;
+        float: left;
+    }
+
+    #fotoGrande2 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #textoRectangulo2{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.2em solid #6B000E;
+    }
+
+    #textoRectangulo2 p{
+        margin: auto 5%;
+    }
+
+    #mapa{
+        padding: 0;
+    }
+    #formulario{
+        padding: 30px;
+    }
+
+
+    #fotoPeque{
+        display: none;
+    }
+
+    #textoPeque{
+        display: none;
+    }
+
+    #fotoPeque2{
+        display: none;
+    }
+
+    #textoPeque2{
+        display: none;
+    }
+}
+/*----------RESOLUCIÓN PC-------------*/
+    @media screen and (min-width: 980px){
+
+#logo{
+    padding: 0.8em;
+    height: 170px;
+    max-width: 20%;
+    margin: 0 auto;
+    display: block;
+}
+
+    #main{
     width: 100%;
     background-color: orchid;
 }
 
 #cuatroPartes{
-    margin-top: 8%;
     width: 100%;
     background-color: orange;
     float: left;
@@ -176,20 +614,19 @@ nav{
     float: left;
     background-color: pink;
     min-height: 100%;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #fotoGrande{
     width: 50%;
     float: left;
     display: flex;
-
 }
 
 #fotoGrande img{
     width: 100%;
 
 }
-
 #textoRectangulo{
     width: 100%;
     background-color: white;
@@ -198,7 +635,7 @@ nav{
     min-height: 50%;
     display: flex;
     align-items: center;
-    border-bottom: 0.5em solid #6B000E;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #textoRectangulo p{
@@ -238,9 +675,10 @@ nav{
 
 #dosPartes{
     width: 100%;
+    background-color: orange;
     float: left;
     display: flex;
-    border-top:0.5em solid #6B000E ;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #fotoGrande2{
@@ -254,6 +692,7 @@ nav{
     float: right;
     background-color: pink;
     min-height: 100%;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #fotoGrande2 img{
@@ -268,7 +707,7 @@ nav{
     min-height: 50%;
     display: flex;
     align-items: center;
-    border-bottom: 0.5em solid #6B000E;
+    border-bottom: 0.2em solid #6B000E;
 }
 
 #textoRectangulo2 p{
@@ -306,156 +745,4 @@ nav{
     
 }
 
-
-#chocolates{
-    width: 100%;
-    float: left;
-    display: flex;
-    border-top:0.5em solid #6B000E ;
-}
-
-#chocolates img{
-    width: 100%;
-    
-}
-
-/*Contolador------*/
-#controlador{
-    display: block;
-    width: 100%;
-    background-color: chocolate;
-    float: left;
-    border-top:0.5em solid #6B000E ;
-    border-bottom:0.5em solid #6B000E ;
-    margin-bottom: 2em;
-}
-
-#marcoLuces{
-    display: grid;
-    width: 96%;
-    background-color: darkgreen;
-    float: left;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 2%;
-    text-align: center;
-}
-
-#botonRojo{
-    background-color: red;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 40%;
-}
-
-
-#botonAmarillo{
-    background-color: yellow;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 20%;
-}
-
-#botonVerde{
-    background-color: green;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 20%;
-}
-
-#botonAzul{
-    background-color: blue;
-    width: 8em;
-    height:8em;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 20%;
-}
-
-#contCuadros{
-    display: grid;
-    width: 96%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    text-align: center;
-    padding: 2%;
-}
-
-#tableta{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#marcobotones{
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.conCuadrados{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    padding: 2%;
-}
-
-.cuboBasico{
-    display: block;
-}
-
-.cuboBasico img{
-    width: 100%;
-    height: 100%;
-}
-
-#formulario{
-    padding: 2em;
-    padding-left: 12em;
-    padding-right: 12em;
-    background-color: white;
-
-}
-
-
-#formulario label input{
-    background-color: transparent;
-    border: 0;
-    border-bottom: 0.2em solid gray;
-    width: 100%;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    outline: 0;
-    padding-left: 1em;
-    padding-bottom: 0.5em;
-}
-
-#formulario input{
-    background: lightgrey;
-    border: 0.2em solid gray;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    padding: 1em;
-}
-
-#mapa{
-    background-color: white;
-    padding-left: 15em;
-    padding-right: 15em;
-    text-align: center;
-}
-#mapa iframe{
-    padding: 0.5em;
-}
-
-@media screen and (max-width : 980px){ 
-   
-}
+    }
