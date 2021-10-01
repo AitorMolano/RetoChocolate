@@ -135,29 +135,34 @@ nav p{
 }
 
 #contCuadros{
-    display: grid;
+    display: flex;
     width: 96%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     text-align: center;
+    padding: 2%;
+    float: left;
+}
+
+.conInterfaz{
+    display: block;
+    min-width: 46%;
+    float: left;
     padding: 2%;
 }
 
-#tableta{
-    grid-column: 1;
-    grid-row: 1;
+.conInterfaz h4{
+    display: block;
+    min-width: 55%;
 }
 
-#marcobotones{
-    grid-column: 2;
-    grid-row: 1;
-}
 
 .conCuadrados{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     padding: 2%;
+
+    float: left;
+    margin: 0 auto;
 }
 
 .cuboBasico{
@@ -169,6 +174,30 @@ nav p{
     height: 100%;
 }
 
+#botonesMaster{
+    display: flex;
+    float: left;
+    background-color: cyan;
+    width: 100%;
+}
+
+#conOnOff{
+    float: left;
+    padding: 2%;
+    margin-left: 10%;
+}
+
+#conOnOff label input{
+    width: 150%;
+    height: 150%;
+}
+
+#conControl{
+    display: flex;
+    float: left;
+    background-color: darkgreen;
+    margin-left: auto;
+}
 /*
 .luz{
     width: 21%;
