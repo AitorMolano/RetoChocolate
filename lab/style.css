@@ -168,13 +168,19 @@ nav{
         background-color: #F3E5AB ;
         background-image: linear-gradient(#F3E5AB, #614015);
         position: fixed;
+        display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 30%;
+          grid-auto-rows: minmax(120px, auto);
     }
 
     #logo{
     padding: 0.8em;
     height: 100%;
-    min-width: 20%;
+    min-width: 100%;
+    margin: 0 auto;
     display: inline-block;
+    grid-column: 2;
     }
     
     #login{
@@ -182,13 +188,16 @@ nav{
     }
     
     #usuario{
-        display: flex;
+        display: inline-flex;
+        grid-column: 3;
     }
 
     #menu{
-        width: 4%;
+        min-width:100%;
+        height: 80%;
         padding: 0.8em;
         float: left;
+        grid-column: 1;
     }
 
     #main{
@@ -207,13 +216,18 @@ nav{
         width: 100%;
         background-color: pink;
         min-height: 100%;
+        margin-top: 120px;
     }
-    
+    #dosPartes{
+        width: 100%;
+        background-color: orange;
+        display: flex;
+    }
     #fotoGrande{
         width: 100%;
         display: flex;
         margin-top: 120px;
-        height: 50%;
+        height: 100%;
     }
     
     #fotoGrande img{
@@ -222,56 +236,62 @@ nav{
     
     #textoRectangulo{
         width: 100%;
-        height: 50%;
+        min-height: 100%;
         background-color: white;
         text-align: center;
         display: flex;
         align-items: center;
         border-bottom: 0.2em solid #6B000E;
-        margin-top: 120px;
     }
     
     #textoRectangulo p{
         margin: auto 5%;
     }
 
-    #fotoPeque img{
+    #tresPartes2{
+        max-width: 50%;
+        background-color: pink;
+        min-height: 100%;
+    }
+
+    #fotoGrande2{
+        max-width: 50%;
+        float: left;
+    }
+
+    #fotoGrande2 img{
         width: 100%;
+        height: 100%;
     }
 
-
-    #fotoPeque{
-        float: right;
-    }
-
-    #textoPeque{
-        width: 50%;
+    #textoRectangulo2{
+        width: 100%;
+        height: 100%;
         background-color: white;
         text-align: center;
         display: flex;
         align-items: center;
-        float: right;
+        border-bottom: 0.2em solid #6B000E;
     }
-    
-    #textoPeque p{
-        margin: auto 10%;
-        display: flex;
-        
+
+    #textoRectangulo2 p{
+        margin: auto 5%;
     }
 
 
-
-    #fotoGrande2{
+    #fotoPeque{
         display: none;
     }
+
+    #textoPeque{
+        display: none;
+    }
+
     #fotoPeque2{
         display: none;
     }
 
     #textoPeque2{
-        display: none;
-    }
-    #textoRectangulo2{
         display: none;
     }
 }
