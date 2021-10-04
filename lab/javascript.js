@@ -13,7 +13,7 @@ function ocultarMenu() {
 
 
 function mostrarUsuario() {
-    document.getElementById("usuario-vertical").style.width = "30%";
+    document.getElementById("usuario-vertical").style.width = "40%";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "none";
 };

@@ -172,6 +172,15 @@ footer p{
 
 }
 
+#usuario-vertical a {
+    display: block;
+    font-size: 120%;
+    color: white;
+    text-decoration: none;
+    padding-top: 2em;
+    
+}
+
 #usuario-vertical label input{
     background-color: transparent;
     border: 0;
