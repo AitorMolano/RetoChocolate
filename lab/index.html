@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <img src="menu.png" alt="menu" id="menu" onclick="">
+            <img src="menu.png" alt="menu" id="menu" onclick="mostrarMenu()">
              <div id="login">
                 <p id="titulos">Login de Usuario</p>
                 <label>
@@ -20,11 +20,33 @@
                 <input type="button" value="Entrar" id="boton">
             </div>
             <img src="logochoco2.png" alt="foro" id="logo">
-            <img src="usuario.png" id="usuario">
+            <img src="usuario.png" id="usuario" onclick="mostrarUsuario()">
+            <div id="usuario-vertical">
+                <a href="#" class="boton-cerrar-vertical" onclick="ocultarUsuario()">&times;</a>
+                <div id="login-vertical">
+                    <p id="titulos">Login de Usuario</p>
+                    <label>
+                        <input type="text" id="usuarios-vertical" placeholder="Usuario"><br>
+                        <input type="text" id="contrasena-vertical" placeholder="Contraseña"><br>
+                    </label>
+                    <input type="button" value="Entrar" id="boton">
+            </div>
         </nav>
     </header>
+    <div id="menu-vertical">
+        <a href="#" class="boton-cerrar" onclick="ocultarMenu()">&times;</a>
+        <ul class="menu">
+            <li><a href="#Inicio" id="linea" onclick="ocultarMenu()">Inicio</a></li>
+            <li><a href="#Quienes somos" id="linea" onclick="ocultarMenu()">Quienes somos</a></li>
+            <li><a href="#Chocolates" id="linea" onclick="ocultarMenu()">Chocolates</a></li>
+            <li><a href="#Maquina" id="linea" onclick="ocultarMenu()">Maquina</a></li>
+            <li><a href="#Contacto" id="linea" onclick="ocultarMenu()">Contactanos</a></li>
+        </ul>
+    </div> 
+
     <div id="main">
-        <div id="cuatroPartes">
+
+        <a name="Inicio"><div id="cuatroPartes">
             <div id="tresPartes">
                 <div id="textoRectangulo">
                     <p>
@@ -45,7 +67,7 @@
             </div>
         </div>
 
-        <div id="dosPartes">
+        <a name="Quienes somos"><div id="dosPartes">
             <div id="fotoGrande2">
                 <img src="./kidEatingChocolate.jpg" alt="foto de ejemplo">
             </div>
@@ -65,10 +87,12 @@
                 </div>
             </div>
         </div>
-        <div id="chocolates">
+
+        <a name="Chocolates"><div id="chocolates">
             <img src="./ingredientes.jpg" alt="foto de ejemplo">
         </div>
-        <div id="controlador">
+
+        <a name="Maquina"><div id="controlador">
             <div id="marcoLuces">
                 <div id="botonRojo" class="luz">
                     <p>
@@ -293,17 +317,17 @@
                 </div>
             </div>
         </div>
-    <div id="formulario">
+    <a name="Contacto"><div id="formulario">
             <h1 id="titulos">Contáctanos</h1><br>
             <p>Si deseas contactar con nosotros puedes hacerlo mediante nuestro número de teléfono <a href="#">983432442</a>, por nuesto correo electrónico <a href="#">messa@gmail.com</a> o rellenando el siguiente formulario de contacto</p>
             <form action="">
                 <label>
-                    <input type="text" name="nombre" placeholder="Nombre"><br>
-                    <input type="text" name="telefono" placeholder="Teléfono"><br>
-                    <input type="text" name="correo" placeholder="Correo Electrónico"><br>
-                    <input type="textarea" name="mensaje" placeholder="Envía un mensaje"><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+                    <input type="text" id="telefono" name="telefono" placeholder="Telefono"><br>
+                    <input type="text" id="correo" name="correo" placeholder="Correo Electronico"><br>
+                    <input type="textarea" id="mensaje" name="mensaje" placeholder="Envia un mensaje"><br>
                 </label>
-                <input type="button" value="Enviar Formulario" id="Enviar">
+                <button onclick="validar()">Enviar formulario</button>
             </form>
         </div>
         <div id="mapa">
@@ -311,8 +335,14 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.253348277948!2d-2.6792405485728183!3d42.8674965107939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc24a2f4d4c95%3A0x7cded83857c813f4!2sEgibide%20-%20Arriaga!5e0!3m2!1ses!2ses!4v1632983659191!5m2!1ses!2ses" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
+    <div class="ir-arriba">
+        <div class="boton-ir-arriba">
+            <i class="fas fa-chevron-up">^</i>
+        </div>
+    </div>
     <footer>
         <p>2021 MES S.A. - TODOS LOS DERECHOS RESERVADOS</p>
     </footer>
+    <script src="javascript.js"></script>
 </body>
 </html>
