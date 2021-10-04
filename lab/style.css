@@ -56,6 +56,8 @@ footer p{
 }
 
 /*Imagenes completas*/
+
+
 #chocolates{
     width: 100%;
     height: 100%;
@@ -66,6 +68,137 @@ footer p{
     width: 100%;
 
 }
+
+/*Boton arriba*/
+.ir-arriba{
+    position: fixed;
+    bottom:  4rem;
+    right: 1rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+  }
+
+.boton-ir-arriba{
+    width: 0rem;
+    height: 0rem;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
+}
+
+.boton-ir-arriba i{
+    position: absolute;
+    font-size: 4rem;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .boton-ir-arriba{
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    100%{
+        width: 6.6rem;
+        height: 6.6rem;       
+    }
+}
+
+/*Usuario-vertical*/
+#login-vertical{
+    padding: 0.8em;
+    margin-top: 2.5em;
+    height: 100%;
+    max-width:100%;
+}
+#usuario-vertical{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    color: white;
+}
+
+
+#usuario-vertical .boton-cerrar-vertical {
+    position: absolute;
+    top:    1rem;
+    left: 1rem;
+    font-size: 4rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 10%;
+    width: 10%;
+    text-align: center;
+
+}
+
+#usuario-vertical label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid white;
+    width: 80%;
+    outline: 0;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+    color: white;
+
+}
+
+#usuario-vertical label input::placeholder{
+    color: white;
+}
+
+#usuario-vertical input{
+    background: lightgrey;
+    border: 0.2em solid black;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 80%;
+
+}
+
+
 /*Controlador*/
 #controlador{
     display: block;
@@ -201,7 +334,7 @@ footer p{
     padding-bottom: 0.5em;
 }
 
-#formulario input{
+#formulario button{
     background: lightgrey;
     border: 0.2em solid gray;
     margin-bottom: 1em;
@@ -595,6 +728,11 @@ nav{
     max-width: 20%;
     margin: 0 auto;
     display: block;
+}
+
+/*Menu usuario quitado*/
+#usuario-vartical{
+    display: none;
 }
 
     #main{
