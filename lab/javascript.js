@@ -23,8 +23,14 @@ function ocultarUsuario() {
     document.getElementById("usuario-vertical").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "inline";
-
+    if(screen.width <= 480 ){
+        document.getElementById("menu").style.display = "none";
+    }
+    else{
+        document.getElementById("menu").style.display = "inline";
+    };
 };
+
 function validar() {
     try{    
         let nombre = document.getElementById("nombre").value;
