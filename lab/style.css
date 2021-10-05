@@ -247,10 +247,12 @@ footer p{
 }
 
 #contCuadros{
-    display: grid;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
     width: 96%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    max-height: 50%;
     text-align: center;
     padding: 2%;
 }
@@ -403,6 +405,10 @@ footer p{
 
 }
 
+#cerrar-sesion{
+    display: none;
+}
+
 #menu{
     width: 4%;
     padding: 0.8em;
@@ -460,11 +466,14 @@ footer p{
     
 }
 
-#menu-vertical #linea:hover{
+#menu-vertical li a:hover{
     color:white;
     border-bottom: 0.2em solid white;
 }
 
+#menu-vertical #maquina{
+    display: none;
+}
 
 nav{
     box-sizing: content-box;
