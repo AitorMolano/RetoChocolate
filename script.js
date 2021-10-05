@@ -15,6 +15,13 @@ function ajax_get_json(url){
     return datos;
 }
 
+function restartOpacity(){
+    luzRoja.style.opacity(0.3);
+    luzAmarillo.style.opacity(0.3);
+    luzVerde.style.opacity(0.3);
+    luzAzul.style.opacity(0.3);
+}
+
 function clickOn(){
     onOff.style.backgroundColor("green");
     onOff.value("ON");
@@ -27,15 +34,19 @@ function clickOn(){
         }
     }
 
-    
+    if(color == "botonRojo"){
+        alert("El robot esta desconectado.");
+        onOff.style.backgroundColor("green");
+        onOff.value("ON");
+    }
+    else{
+        if(color == "botonAzul"){
+            alert("Almacén de MilkTxoko vacío.");
+        }
+    }
 }
 
 function startControlador(){
-    var luzRoja = document.getElementById("botonRojo");
-    var luzAmarillo = document.getElementById("botonAmarillo");
-    var luzVerde = document.getElementById("botonVerde");
-    var luzAzul = document.getElementById("botonAzul");
-
     var arrayOnzas = [document.getElementById("contOnzas1"),
                     document.getElementById("contOnzas2"),
                     document.getElementById("contOnzas3"),
@@ -65,10 +76,7 @@ function startControlador(){
     
     arrayOnzas.forEach(elemento => elemento.src="./img/vacio.jpg");
     
-    luzRoja.style.opacity(0.3);
-    luzAmarillo.style.opacity(0.3);
-    luzVerde.style.opacity(0.3);
-    luzAzul.style.opacity(0.3);
+    restartOpacity();
 
     var onOff = document.getElementById("onOff");
     onOff.value("Off");
@@ -86,76 +94,3 @@ function setUpControlador(){
     startControlador();
 
 }
-
-
-
-
-
-
-    //___________________________________________________
-    
-    var ArrayOnzas = [document.getElementById("boton1"),
-                    document.getElementById("boton2"),
-                    document.getElementById("boton3"),
-                    document.getElementById("boton4"),
-                    document.getElementById("boton5"),
-                    document.getElementById("boton6"),
-                    document.getElementById("boton7"),
-                    document.getElementById("boton8"),
-                    document.getElementById("cboton9"),
-                    document.getElementById("boton10"),
-                    document.getElementById("boton11"),
-                    document.getElementById("boton12"),
-                    document.getElementById("boton13"),
-                    document.getElementById("boton14"),
-                    document.getElementById("boton15"),
-                    document.getElementById("boton16"),
-                    document.getElementById("boton17"),
-                    document.getElementById("boton18"),
-                    document.getElementById("boton19"),
-                    document.getElementById("boton20"),
-                    document.getElementById("boton21"),
-                    document.getElementById("boton22"),
-                    document.getElementById("boton23"),
-                    document.getElementById("boton24"),
-                    document.getElementById("boton25")
-                    ];
-    
-    
-    function inicio(){
-        //hay que tratar de coger la variable del html mediante un input, poniendo el leer variable del plc dentro de value del input para recogerlo en una variable mediante el metodo de onsumit
-        /*
-        
-        let formConsultarEstado = document.createElement("form");
-        formConsultarEstado.onsubmit(setEstado(estadoParo));
-        formConsultarEstado.method = "POST";
-        formConsultarEstado.innerHTML = "<input name=\""
-        
-
-        //_____________________________
-        let formCambioEstado = document.createElement('form');
-        formCambioEstado.method = 'POST';
-
-        formCambioEstado.innerHTML = "<!-- AWP_In_Variable Name=\'\"Bool\":\"paro\"\'--> <input name=\'\"Bool\":\"paro\"\' value=\"true\">";
-
-        // el formulario debe estar en el document para poder enviarlo
-        document.body.append(formCambioEstado);
- 
-        formCambioEstado.submit();
-        return false;
-        */
-
-        if(=:"mis_datos".paro: == 0){
-            let boton = document.getElementById("onOff");
-            boton.value("OFF");
-            boton.style.backgroundColor("red");
-        }
-        else{
-            let boton = document.getElementById("onOff");
-            boton.value("ON");
-            boton.style.backgroundColor("green");
-
-            document.getElementById("automatico").style.backgroundColor("green");
-        }
-
-    }
