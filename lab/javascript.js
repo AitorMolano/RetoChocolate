@@ -81,4 +81,45 @@ document.querySelector('.ir-arriba')
     });
 });
 
+var admin = [{usuario: "root",con: "root"},{usuario: "jefe",con: "12345Abcde"}];
 
+function entrar(){
+   let usuarios = document.getElementById("usuarios").value;
+   let contrasena = document.getElementById("contrasena").value;
+
+   let x = admin.find(adm=> adm.usuario == usuarios && adm.con == contrasena);
+
+   if(x == undefined){
+       alert("Usuario o contraseña incorrecto")
+   }
+   else{
+       alert("Bienvenido " + usuarios)
+        let div = document.getElementById("login");
+        let divLateral = document.getElementById("usuario");
+        let controlador = document.getElementById("controlador");
+        div.style.display= "none";
+        divLateral.style.display= "none";
+        controlador.style.display = "block";
+   }
+}
+
+
+function entrarVertical(){
+    let usuarios = document.getElementById("usuarios-vertical").value;
+    let contrasena = document.getElementById("contrasena-vertical").value;
+ 
+    let x = admin.find(adm=> adm.usuario == usuarios && adm.con == contrasena);
+ 
+    if(x == undefined){
+        alert("Usuario o contraseña incorrecto")
+    }
+    else{
+        alert("Bienvenido " + usuarios)
+         let div = document.getElementById("login");
+         let divLateral = document.getElementById("usuario");
+         let controlador = document.getElementById("controlador");
+         div.style.display= "none";
+         divLateral.style.display= "none";
+         controlador.style.display = "block";
+    }
+ }
