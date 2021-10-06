@@ -136,7 +136,7 @@ footer p{
 #login-vertical{
     padding: 0.8em;
     margin-top: 2.5em;
-    height: 100%;
+    height: 50%;
     max-width:100%;
 }
 #usuario-vertical{
@@ -167,6 +167,15 @@ footer p{
     width: 10%;
     text-align: center;
 
+}
+
+#usuario-vertical a {
+    display: block;
+    font-size: 120%;
+    color: white;
+    text-decoration: none;
+    padding-top: 2em;
+    
 }
 
 #usuario-vertical label input{
@@ -233,10 +242,12 @@ footer p{
 }
 
 #contCuadros{
-    display: grid;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
     width: 96%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    max-height: 50%;
     text-align: center;
     padding: 2%;
 }
@@ -388,7 +399,9 @@ footer p{
     width: 80%;
 
 }
-
+#cerrar-sesion{
+    display: none;
+}
 #menu{
     width: 4%;
     padding: 0.8em;
@@ -446,9 +459,13 @@ footer p{
     
 }
 
-#menu-vertical #linea:hover{
+#menu-vertical li a:hover{
     color:white;
     border-bottom: 0.2em solid white;
+}
+
+#menu-vertical #maquina{
+    display: none;
 }
 
 

@@ -179,7 +179,7 @@ function ocultarMenu() {
 
 //mostrar barra usu
 function mostrarUsuario() {
-    document.getElementById("usuario-vertical").style.width = "30%";
+    document.getElementById("usuario-vertical").style.width = "40%";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "none";
 };
@@ -189,7 +189,12 @@ function ocultarUsuario() {
     document.getElementById("usuario-vertical").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "inline";
-
+    if(screen.width <= 480 ){
+        document.getElementById("menu").style.display = "none";
+    }
+    else{
+        document.getElementById("menu").style.display = "inline";
+    };
 };
 //validar formulario
 function validar() {
@@ -214,7 +219,7 @@ function validar() {
         }
 
         if(mensaje == ""){
-            throw "Debe escribir un mesaje "
+            throw "Debe escribir un mensaje "
         }
     
     var img=document.createElement("img");

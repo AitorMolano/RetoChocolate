@@ -18,10 +18,10 @@
                     <input type="text" id="nombre" placeholder="Usuario"><br>
                     <input type="text" id="nombre" placeholder="Contraseña"><br>
                 </label>
-                <input type="button" value="Entrar" id="boton">
+                <input type="button" value="Entrar" id="boton" onclick="entrar()">
             </div>
             <img src="logochoco2.png" alt="foro" id="logo">
-            <img src="usuario.png" id="usuario" onclick="mostrarUsuario()">
+            <img src="usuario.png" id="usuario" onclick="ocultarMenu(),mostrarUsuario()">
             <div id="usuario-vertical">
                 <a href="#" class="boton-cerrar-vertical" onclick="ocultarUsuario()">&times;</a>
                 <div id="login-vertical">
@@ -30,24 +30,25 @@
                         <input type="text" id="usuarios-vertical" placeholder="Usuario"><br>
                         <input type="text" id="contrasena-vertical" placeholder="Contraseña"><br>
                     </label>
-                    <input type="button" value="Entrar" id="boton">
+                    <input type="button" value="Entrar" id="boton" onclick="entrarVertical()">
             </div>
         </nav>
     </header>
+
     <div id="menu-vertical">
         <a href="#" class="boton-cerrar" onclick="ocultarMenu()">&times;</a>
         <ul class="menu">
-            <li><a href="#Inicio" id="linea" onclick="ocultarMenu()">Inicio</a></li>
-            <li><a href="#Quienes somos" id="linea" onclick="ocultarMenu()">Quienes somos</a></li>
-            <li><a href="#Chocolates" id="linea" onclick="ocultarMenu()">Chocolates</a></li>
-            <li><a href="#Maquina" id="linea" onclick="ocultarMenu()">Maquina</a></li>
-            <li><a href="#Contacto" id="linea" onclick="ocultarMenu()">Contactanos</a></li>
+            <li><a href="#Inicio" id="inicio" onclick="ocultarMenu()">Inicio</a></li>
+            <li><a href="#Quienes somos" id="quiene-somos" onclick="ocultarMenu()">Quienes somos</a></li>
+            <li><a href="#Chocolates" id="chocolate" onclick="ocultarMenu()">Chocolates</a></li>
+            <li><a href="#Maquina" id="maquina" class="desaparecer" onclick="ocultarMenu()">Maquina</a></li>
+            <li><a href="#Contacto" id="contacto" onclick="ocultarMenu()">Contactanos</a></li>
         </ul>
     </div> 
 
     <div id="main">
 
-        <a name="Inicio"><div id="cuatroPartes">
+        <a id="Inicio"><div id="cuatroPartes">
             <div id="tresPartes">
                 <div id="textoRectangulo">
                     <p>
@@ -68,7 +69,7 @@
             </div>
         </div>
 
-        <a name="Quienes somos"><div id="dosPartes">
+        <a id="Quienes somos"><div id="dosPartes">
             <div id="fotoGrande2">
                 <img src="./kidEatingChocolate.jpg" alt="foto de ejemplo">
             </div>
@@ -89,11 +90,11 @@
             </div>
         </div>
 
-        <a name="Chocolates"><div id="chocolates">
+        <a id="Chocolates"><div id="chocolates">
             <img src="./ingredientes.jpg" alt="foto de ejemplo">
         </div>
 
-        <a name="Maquina"><div id="controlador">
+        <a id="Maquina"><div id="controlador">
             <div id="marcoLuces">
                 <div id="botonRojo" class="luz">
                     <p>
@@ -318,10 +319,10 @@
                 </div>
             </div>
         </div>
-    <a name="Contacto"><div id="formulario">
+    <a id="Contacto"><div id="formulario">
             <h1 id="titulos">Contáctanos</h1><br>
             <p>Si deseas contactar con nosotros puedes hacerlo mediante nuestro número de teléfono <a href="#">983432442</a>, por nuesto correo electrónico <a href="#">messa@gmail.com</a> o rellenando el siguiente formulario de contacto</p>
-            <form action="">
+            <form>
                 <label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
                     <input type="text" id="telefono" name="telefono" placeholder="Telefono"><br>
