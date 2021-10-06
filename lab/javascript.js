@@ -6,7 +6,8 @@ function ajax_get_json(url){
     xmlhttp.onreadystatechange = function(){
         if(xmlhttp.readyState === 4 &&
             xmlhttp.status === 200){
-                datos = JSON.parse(xmlhttp.responseText);
+				console.log(xmlhttp.response + typeof xmlhttp.response)
+                datos = JSON.parse(xmlhttp.response);
             }
     }
 
@@ -15,10 +16,18 @@ function ajax_get_json(url){
 
     return datos;
 }
+var onOff = document.getElementById("onOff");
+    onOff.value="Off";
+    onOff.style.backgroundColor="red";
+    onOff.addEventListener("click", clickOn);
+	
 
 function clickOn(){
-    onOff.style.backgroundColor("green");
-    onOff.value("ON");
+	//Creacion de variables
+	
+	
+    onOff.style.backgroundColor="green";
+    onOff.value="ON";
 
     var luces = ajax_get_json("./luces.html");
 
@@ -27,8 +36,7 @@ function clickOn(){
             document.getElementById(color).opacity(1);
         }
     }
-
-    
+	console.log(JSON.parse(luces)); 
 }
 //arranqueMaquina
 function startControlador(){
