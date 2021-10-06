@@ -90,8 +90,14 @@ document.querySelector('.ir-arriba')
 var admin = [{usuario: "root",con: "root"},{usuario: "jefe",con: "12345Abcde"}];
 
 function entrar(){
+try{
+
    let usuarios = document.getElementById("usuarios").value;
    let contrasena = document.getElementById("contrasena").value;
+
+   if(usuarios == "" || contrasena == ""){
+        throw "No puede dejar campos en blanco"
+    }
 
    let x = admin.find(adm=> adm.usuario == usuarios && adm.con == contrasena);
 
@@ -100,6 +106,7 @@ function entrar(){
    }
    else{
        alert("Bienvenido " + usuarios)
+        ocultarUsuario();
         let div = document.getElementById("login");
         let divLateral = document.getElementById("usuario");
         let controlador = document.getElementById("controlador");
@@ -108,19 +115,29 @@ function entrar(){
         controlador.style.display = "block";
    }
 }
+    catch(err){
+        alert(err);
+    }
+}
 
 
 function entrarVertical(){
+try{    
     let usuarios = document.getElementById("usuarios-vertical").value;
     let contrasena = document.getElementById("contrasena-vertical").value;
- 
+    
+    if(usuarios == "" || contrasena == ""){
+        throw "No puede dejar campos en blanco";
+    }
+
     let x = admin.find(adm=> adm.usuario == usuarios && adm.con == contrasena);
  
     if(x == undefined){
-        alert("Usuario o contraseña incorrecto")
+        alert("Usuario o contraseña incorrecto");
     }
     else{
         alert("Bienvenido " + usuarios)
+        ocultarUsuario();
          let div = document.getElementById("login");
          let divLateral = document.getElementById("usuario");
          let controlador = document.getElementById("controlador");
@@ -129,5 +146,9 @@ function entrarVertical(){
          divLateral.style.display= "none";
          controlador.style.display = "block";
          maquina.style.display = "block";
+    }
+    }
+    catch(err){
+        alert(err);
     }
  }
