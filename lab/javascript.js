@@ -21,13 +21,45 @@ var onOff = document.getElementById("onOff");
     onOff.style.backgroundColor="red";
     onOff.addEventListener("click", clickOn);
 	
-
+function crearFormulario(){
+	let formMarcha = document.createElement("form");
+	formMarcha.setAttribute("id", "formularioMarcha");
+	formMarcha.innerHTML = "<!-- AWP_In_Variable Name='\"mis_datos\"'--><input name='\"mis_datos\".martxa' value=1/>"
+	document.body.append(formMarcha);
+	
+	$.ajax({
+		type: "POST",
+		url: $("#formularioMarcha").attr('action'),
+		data: $("#formularioMarcha").serialize()
+	});
+	
+	console.log(:="mis_datos".martxa:);
+}
 function clickOn(){
 	//Creacion de variables
 	
-	
+	if(onOff.value="Off"){
     onOff.style.backgroundColor="green";
     onOff.value="ON";
+	crearFormulario();
+	
+	/*
+	var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function(){
+			if(xmlhttp.readyState === 4 &&
+				xmlhttp.status === 200){
+					console.log("funciona 200");
+					let formMarcha = document.createElement("form");
+					formMarcha.method="POST";
+					formMarcha.innerHTML = "<!-- AWP_In_Variable Name='\"mis_datos\"'--><input name='\"mis_datos\".martxa' value=1/>"
+					document.body.append(formMarcha);
+					formMarcha.submit();
+			}
+		}
+		xmlhttp.open("POST", "./index.html" , true);
+		xmlhttp.send();*/
+		console.log("funciona fuera");
+	}
 
     var luces = ajax_get_json("./luces.html");
 
@@ -38,6 +70,7 @@ function clickOn(){
     }
 	console.log(JSON.parse(luces)); 
 }
+
 //arranqueMaquina
 function startControlador(){
 //cambiar el id hacia las imagenes
