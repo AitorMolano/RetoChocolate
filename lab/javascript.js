@@ -74,6 +74,7 @@ window.onscroll = function(){
         .classList.add('show');
     }
     else{
+        
         document.querySelector('.ir-arriba')
         .classList.remove('show');
     }
