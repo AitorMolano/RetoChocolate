@@ -69,7 +69,7 @@ function validar() {
 };
 
 window.onscroll = function(){
-    if(document.documentElement.scrollTop>100){
+    if(document.documentElement.scrollTop > 100){
         document.querySelector('.ir-arriba')
         .classList.add('show');
     }
@@ -110,9 +110,11 @@ try{
         let div = document.getElementById("login");
         let divLateral = document.getElementById("usuario");
         let controlador = document.getElementById("controlador");
+        let maquina = document.getElementById("maquina");
         div.style.display= "none";
         divLateral.style.display= "none";
         controlador.style.display = "block";
+        maquina.style.display = "block";
    }
 }
     catch(err){

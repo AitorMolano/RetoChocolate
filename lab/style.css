@@ -6,7 +6,7 @@
     margin: 0;
     box-sizing: content-box;
     font-size: 13px;
-    font-family: Conforta;
+    font-family: Comfortaa;
 }
 
 body{
@@ -23,18 +23,18 @@ p{
     font-size: 13;
 }
 
-a:link{
+#link a:link{
     color: #008EAB;
     font-family: "Comfortaa";
     font-size: 13;
 }
 
-a:hover{
+#link a:hover{
     font-family: "Comfortaa";
     font-weight: bold;
 }
 
-a:visited{
+#link a:visited{
     color: #BC001A;
 }
 /*Fin de fuentes*/
@@ -43,7 +43,7 @@ header{
 }
 
 footer{
-    width: 100%;
+    width: 99.3%;
     height: 4em;
     background-color: black;
     display: inline-block;
@@ -57,23 +57,22 @@ footer p{
 
 /*Imagenes completas*/
 
-
 #chocolates{
     width: 100%;
-    height: 100%;
     border-bottom:0.5em solid #6B000E;
     border-top:0.5em solid #6B000E;   
+    clear: both;
 }
 
 #chocolates img{
-    width: 100%;
-
+    width: 100%;    
+    display: flex;
 }
 
 /*Boton arriba*/
 .ir-arriba{
     position: fixed;
-    bottom:  4rem;
+    bottom:  1rem;
     right: 1rem;
     width: 6.6rem;
     height: 6.6rem;
@@ -86,7 +85,7 @@ footer p{
     background: rgba(0,0,0,0.8);
     border-radius: 50%;
     cursor: pointer;
-    transition: .2s;
+    transition: 0.2s;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -97,8 +96,8 @@ footer p{
 .boton-ir-arriba i{
     position: absolute;
     font-size: 4rem;
-    top: 55%;
-    left: 50%;
+    top: 65%;
+    left: 40%;
     transform: translate(-50%, -50%) scale(0);
     color: white;
     transition: .2s;
@@ -215,7 +214,7 @@ footer p{
     width: 100%;
     float: left;
     border-bottom:0.5em solid #6B000E;
-    margin-bottom: 2em;
+
 }
 
 #marcoLuces{
@@ -326,11 +325,11 @@ footer p{
 /*Contacto*/
 
 #formulario{
-    padding: 2em;
+    padding-top: 2em;
     padding-left: 12em;
     padding-right: 12em;
     background-color: white;
-
+    clear: both;
 }
 
 
