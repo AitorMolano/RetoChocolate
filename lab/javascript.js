@@ -16,11 +16,12 @@ function ajax_get_json(url){
 
     return datos;
 }
+//funciones Boton
 var onOff = document.getElementById("onOff");
     onOff.value="Off";
     onOff.style.backgroundColor="red";
     onOff.addEventListener("click", clickOn);
-	
+
 function crearFormulario(){
 	let formMarcha = document.createElement("form");
 	formMarcha.setAttribute("id", "formularioMarcha");
@@ -35,6 +36,24 @@ function crearFormulario(){
 	
 	console.log(:="mis_datos".martxa:);
 }
+
+function leerCiclo(){
+    var xmlhttp = new XMLHttpRequest();
+    var datoCiclo;
+
+    xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState === 4 &&
+            xmlhttp.status === 200){
+                datos = xmlhttp.response;
+            }
+    }
+
+    xmlhttp.open("POST", "./leerciclo.html", true);
+    xmlhttp.send();
+
+    return datoCiclo;
+}
+
 function clickOn(){
 	//Creacion de variables
 	
@@ -68,7 +87,27 @@ function clickOn(){
             document.getElementById(color).opacity(1);
         }
     }
-	console.log(JSON.parse(luces)); 
+	console.log(JSON.parse(luces));
+	
+	var onzas = ajax_get_json("./onzas.html");
+	leerciclo();
+	while(nuevoCiclo==1){
+		arrayOnzas.forEach(elemento => {
+			for (var tipoOnza in onzas){
+				
+				switch(tipoOnza){
+					case 0: let elemento => elemento.src="./img/vacio.jpg";
+					break;
+					
+					case 1: let elemento => elemento.src="./img/blanco.jpg";;
+					break;
+					
+					case 2: let elemento => elemento.src="./img/negro.jpg";;
+					break;
+				}
+			}
+		});
+	}
 }
 
 //arranqueMaquina
