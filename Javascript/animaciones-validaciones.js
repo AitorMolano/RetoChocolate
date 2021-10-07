@@ -1,24 +1,26 @@
+
+//mostrar index
 function mostrarMenu() {
     document.getElementById("menu-vertical").style.width = "30%";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "none";
 };
 
-
+//ocultar index
 function ocultarMenu() {
     document.getElementById("menu-vertical").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "inline";
 };
 
-
+//mostrar barra usu
 function mostrarUsuario() {
     document.getElementById("usuario-vertical").style.width = "40%";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("menu").style.display = "none";
 };
 
-
+//ocultar barra usu
 function ocultarUsuario() {
     document.getElementById("usuario-vertical").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
@@ -30,7 +32,7 @@ function ocultarUsuario() {
         document.getElementById("menu").style.display = "inline";
     };
 };
-
+//validar formulario
 function validar() {
     try{    
         let nombre = document.getElementById("nombre").value;
@@ -53,7 +55,7 @@ function validar() {
         }
 
         if(mensaje == ""){
-            throw "Debe escribir un mesaje "
+            throw "Debe escribir un mensaje "
         }
     
     var img=document.createElement("img");
@@ -67,14 +69,13 @@ function validar() {
         alert(err);
     } 
 };
-
+//Boton arriba
 window.onscroll = function(){
-    if(document.documentElement.scrollTop > 100){
+    if(document.documentElement.scrollTop>100){
         document.querySelector('.ir-arriba')
         .classList.add('show');
     }
     else{
-        
         document.querySelector('.ir-arriba')
         .classList.remove('show');
     }

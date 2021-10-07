@@ -316,10 +316,27 @@ footer p{
 }
 
 #conControl{
-    display: flex;
+    display: block;
     float: left;
+    width: 20%;
     background-color: #E6CC5D;
     margin-left: auto;
+
+}
+
+#patron-1{
+   margin-left: 20%;
+    padding: 0 10%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    clear: right;
+}
+
+#patron-2{
+   margin-left: 20%;
+   padding: 0 10%;
+
+   clear: right;
 }
 
 /*Contacto*/
@@ -565,6 +582,7 @@ nav{
         float: left;
         display: block;
     }
+
 }
 
 /*----------RESOLUCIÓN TABLET-------------*/

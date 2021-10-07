@@ -4,32 +4,352 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media=screen>
     <title>Document</title>
 </head>
 <body>
     <header>
-            <div class="vainilla"><img src="pajaro.jpg" alt="foro" id="logo"></div>
-    </header>
-    <main>
-        <div>
-            <div class="part1">
-                <div class="texto1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat corporis, enim quod, reiciendis expedita eos ad reprehenderit nesciunt minima id dicta tempore nemo voluptatibus sint. Numquam distinctio aspernatur magni! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ipsa odit consectetur fuga reprehenderit voluptatum quidem, suscipit vitae amet tenetur aliquid ab non saepe! Doloremque temporibus ab pariatur magnam mollitia?</p> </div>
-                <div class="foto2">
-                    <img src="pajaro.jpg" alt="Foto" id="foto2">
-                </div>
-                <div class="texto2">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ipsum nobis esse earum, iste ipsam accusamus reiciendis aliquid optio. Aut a molestias dolore quidem possimus error nam. Voluptas, quia dolor!</p>
-                </div>   
+        <nav>
+            <img src="./Imagenes/menu.png" alt="menu" id="menu" onclick="mostrarMenu()">
+            <div id="login">
+                <p id="titulos">Login de Usuario</p>
+                <label>
+                    <input type="text" id="usuarios" placeholder="Usuario"><br>
+                    <input type="password" id="contrasena" placeholder="Contraseña"><br>
+                </label>
+                <input type="button" value="Entrar" id="boton" onclick="entrar()">
             </div>
-            <div class="ppart1">
-                <img src="pajaro.jpg" alt="foto2" id="foto3">
+            <img src="./Imagenes/logochoco2.png" alt="foro" id="logo">
+            <img src="./Imagenes/usuario.png" id="usuario" onclick="ocultarMenu(),mostrarUsuario()">
+            <div id="usuario-vertical">
+                <a href="#" class="boton-cerrar-vertical" onclick="ocultarUsuario()">&times;</a>
+                <div id="login-vertical">
+                    <p id="titulos">Login de Usuario</p>
+                    <label>
+                        <input type="text" id="usuarios-vertical" placeholder="Usuario"><br>
+                        <input type="password" id="contrasena-vertical" placeholder="Contraseña"><br>
+                    </label>
+                    <input type="button" value="Entrar" id="boton" onclick="entrarVertical()">
+            </div>
+        </nav>
+    </header>
+
+    <div id="menu-vertical">
+        <a href="#" class="boton-cerrar" onclick="ocultarMenu()">&times;</a>
+        <ul class="menu">
+            <li><a href="#cuatroPartes" id="inicio" onclick="ocultarMenu()">Inicio</a></li>
+            <li><a href="#dosPartes" id="quiene-somos" onclick="ocultarMenu()">Quienes somos</a></li>
+            <li><a href="#chocolates" id="chocolate" onclick="ocultarMenu()">Chocolates</a></li>
+            <li><a href="#controlador" id="maquina" class="desaparecer" onclick="ocultarMenu()">Maquina</a></li>
+            <li><a href="#formulario" id="contacto" onclick="ocultarMenu()">Contactanos</a></li>
+        </ul>
+    </div> 
+    <div id="main">
+        <div id="cuatroPartes">
+            <div id="tresPartes">
+                <div id="textoRectangulo"> 
+                    <hr>
+                    <p>
+                        Bienvenido a la aplicaci&oacute;n web de MilkTxoko, donde podras ver como creamos nuestas tabletas de chocolate a base de nuestas empresas alrededor de toda España. Disfruta de nuestras trabletas de chocolate o chocolate blanco, realizadas con la mayor sutileza posible.
+                    </p>
+                </div>
+                <div id="fotoPeque">
+                    <img src="./Imagenes/cacao.jpg" alt="foto de ejemplo">
+                </div>
+                <div id="textoPeque">
+                    <hr>
+                    <p>
+                        <i>"Nunca nos olvidamos de hacer feliz a la gente cada dia."</i>
+                    </p>
+                </div>
+            </div>
+            <div id="fotoGrande">
+                <img src="./Imagenes/chocolateInicio.jpg" alt="foto de ejemplo">
             </div>
         </div>
-             
-    </main>
+        <div id="dosPartes">
+            <div id="fotoGrande2">
+                <img src="./Imagenes/kidEatingChocolate.jpg" alt="foto de ejemplo">
+            </div>
+            <div id="tresPartes2">
+                <div id="textoRectangulo2">
+                    <hr>
+                    <p>
+                        MILKTXOKO es una empresa alimenticia enfocada a la gran producción de chocolate, su mayor mercado son los niños y los amantes del chocolate. Uno de los enfoques principales de la empresa es llegar al mayor público posible y vender una imagen de cacao de alta calidad.
+                    </p>
+                </div>
+                <div id="fotoPeque2">
+                    <img src="./Imagenes/cacaoafricano2.jpg" alt="foto de ejemplo">
+                </div>
+                <div id="textoPeque2">
+                    <hr>
+                    <p>
+                        Nuestra empresa apoya el desarollo de las granjas de agricultores de Costa de Marfil. Para obtener el cacao amelonado de mas alta calidad.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="chocolates">
+            <img src="./Imagenes/ingredientes.jpg" alt="foto de ejemplo">
+        </div>
+        <div id="controlador">
+            <div id="marcoLuces">
+                <div id="botonRojo" class="luz">
+                    <p>
+                        Apagado
+                    </p>
+                </div>
+                <div id="botonAmarillo" class="luz">
+                    <p>
+                        En espera
+                    </p>
+                </div>
+                <div id="botonVerde" class="luz">
+                    <p>
+                        Encendido
+                    </p>
+                </div>
+                <div id="botonAzul" class="luz">
+                    <p>
+                        Robot sin MilkTxoko
+                    </p>
+                </div>
+            </div>
+            <div id="contCuadros">
+                <div id="tableta">
+                    <h4>Diseña tu MilkTxoko</h4>
+                    <div id="marcoTableta" class="conCuadrados">
+
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza1" >
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza2" >
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza3" >
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza4">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnzas5">
+                        </div>
+
+
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza6" >
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza7" >
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza8"> 
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza9">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza10">
+                        </div>
+
+
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza11">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza12">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza13">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza14">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza15">
+                        </div>
+
+
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza16">
+                        </div>
+                        <div  class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza17">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza18">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza19">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza20">
+                        </div>
+
+
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza21">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza22">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza23">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza24">
+                        </div>
+                        <div class="cuboBasico">
+                            <img src="./Imagenes/slotVacio.png" alt="Foto ejemplo" id="contOnza25">
+                        </div>
+
+                    </div>
+                </div>
+            <!--
+                <div id="touchPad">
+                    <h4>Control Robot</h4>
+                    <div id="marcoBotones" class="conCuadrados">
+                        
+                        <div id="boton1" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton2" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton3" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton4" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton5" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+
+
+                        <div id="boton6" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton7" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton8" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton9" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton10" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+
+
+                        <div id="boton11" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton12" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton13" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton14" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton15" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+
+
+                        <div id="boton16" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton17" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton18" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton19" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton20" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+
+
+                        <div id="boton21" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton22" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton23" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton24" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+                        <div id="boton25" class="cuboBasico">
+                            <img src="./foto.jpg" alt="Foto ejemplo">
+                        </div>
+
+                    </div>
+                </div>
+                -->
+            </div>
+
+            <div id="botonesMaster">
+                <div id="conOnOff">
+                    <label name="onOff">
+                        <input type="button" value="on/off" id="onOff">
+                    </label>
+                </div>
+                <div id="conControl">
+                    <div id="patron1">
+                        <label name="manual">
+                            <input type="button" value="Patron 1" id="patron-1">
+                        </label>
+                    </div>
+                    <div id="patron2">
+                        <label name="automatico">
+                            <input type="button" value="Patron 2" id="patron-2">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="formulario">
+            <h1>Contactanos</h1><br>
+            <p>Si desea contactar con nosotros puede hacerlo mediante nuestro  numero de telefono 983432442 o por nuesto correo electronico messa@gmail.com o rellenando el siguiente formulario de contanto</p>
+            <form>
+                <label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+                    <input type="text" id="telefono" name="telefono" placeholder="Telefono"><br>
+                    <input type="text" id="correo" name="correo" placeholder="Correo Electronico"><br>
+                    <input type="textarea" id="mensaje" name="mensaje" placeholder="Envia un mensaje"><br>
+                </label>
+                <button onclick="validar()">Enviar formulario</button>
+            </form>
+        </div>
+        
+        <div id="mapa">
+            <p>Aqui tienes el lugar de la empresa si desea visitarnos</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.253348277948!2d-2.6792405485728183!3d42.8674965107939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fc24a2f4d4c95%3A0x7cded83857c813f4!2sEgibide%20-%20Arriaga!5e0!3m2!1ses!2ses!4v1632983659191!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="ir-arriba">
+        <div class="boton-ir-arriba">
+            <i>^</i>
+        </div>
+    </div>
     <footer>
-        <p>Copyright</p>
+        <p>@Copyright</p>
     </footer>
+    <script src="./Javascript/javascript.js"></script>
+    <script src="./Javascript/animaciones-validaciones.js"></script>
 </body>
 </html>
