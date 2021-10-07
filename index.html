@@ -13,23 +13,24 @@
             <img src="./Imagenes/menu.png" alt="menu" id="menu" onclick="mostrarMenu()">
             <div id="login">
                 <p id="titulos">Login de Usuario</p>
-                <label>
+                <div>
                     <input type="text" id="usuarios" placeholder="Usuario"><br>
                     <input type="password" id="contrasena" placeholder="Contraseña"><br>
-                </label>
+                </div>
                 <input type="button" value="Entrar" id="boton" onclick="entrar()">
             </div>
             <img src="./Imagenes/logochoco2.png" alt="foro" id="logo">
-            <img src="./Imagenes/usuario.png" id="usuario" onclick="ocultarMenu(),mostrarUsuario()">
+            <img src="./Imagenes/usuario.png" alt="usuario" id="usuario" onclick="ocultarMenu(),mostrarUsuario()">
             <div id="usuario-vertical">
                 <a href="#" class="boton-cerrar-vertical" onclick="ocultarUsuario()">&times;</a>
                 <div id="login-vertical">
-                    <p id="titulos">Login de Usuario</p>
-                    <label>
+                    <p id="titulos-vertical">Login de Usuario</p>
+                    <div>
                         <input type="text" id="usuarios-vertical" placeholder="Usuario"><br>
                         <input type="password" id="contrasena-vertical" placeholder="Contraseña"><br>
-                    </label>
-                    <input type="button" value="Entrar" id="boton" onclick="entrarVertical()">
+                    </div>
+                    <input type="button" value="Entrar" id="boton-vertical" onclick="entrarVertical()">
+            </div>
             </div>
         </nav>
     </header>
@@ -48,7 +49,7 @@
         <div id="cuatroPartes">
             <div id="tresPartes">
                 <div id="textoRectangulo"> 
-                    <hr>
+
                     <p>
                         Bienvenido a la aplicaci&oacute;n web de MilkTxoko, donde podras ver como creamos nuestas tabletas de chocolate a base de nuestas empresas alrededor de toda España. Disfruta de nuestras trabletas de chocolate o chocolate blanco, realizadas con la mayor sutileza posible.
                     </p>
@@ -57,7 +58,7 @@
                     <img src="./Imagenes/cacao.jpg" alt="foto de ejemplo">
                 </div>
                 <div id="textoPeque">
-                    <hr>
+
                     <p>
                         <i>"Nunca nos olvidamos de hacer feliz a la gente cada dia."</i>
                     </p>
@@ -73,7 +74,7 @@
             </div>
             <div id="tresPartes2">
                 <div id="textoRectangulo2">
-                    <hr>
+
                     <p>
                         MILKTXOKO es una empresa alimenticia enfocada a la gran producción de chocolate, su mayor mercado son los niños y los amantes del chocolate. Uno de los enfoques principales de la empresa es llegar al mayor público posible y vender una imagen de cacao de alta calidad.
                     </p>
@@ -82,7 +83,6 @@
                     <img src="./Imagenes/cacaoafricano2.jpg" alt="foto de ejemplo">
                 </div>
                 <div id="textoPeque2">
-                    <hr>
                     <p>
                         Nuestra empresa apoya el desarollo de las granjas de agricultores de Costa de Marfil. Para obtener el cacao amelonado de mas alta calidad.
                     </p>
@@ -304,18 +304,18 @@
 
             <div id="botonesMaster">
                 <div id="conOnOff">
-                    <label name="onOff">
+                    <label>
                         <input type="button" value="on/off" id="onOff">
                     </label>
                 </div>
                 <div id="conControl">
                     <div id="patron1">
-                        <label name="manual">
+                        <label>
                             <input type="button" value="Patron 1" id="patron-1">
                         </label>
                     </div>
                     <div id="patron2">
-                        <label name="automatico">
+                        <label>
                             <input type="button" value="Patron 2" id="patron-2">
                         </label>
                     </div>
@@ -326,12 +326,12 @@
             <h1>Contactanos</h1><br>
             <p>Si desea contactar con nosotros puede hacerlo mediante nuestro  numero de telefono 983432442 o por nuesto correo electronico messa@gmail.com o rellenando el siguiente formulario de contanto</p>
             <form>
-                <label>
+                <div>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
                     <input type="text" id="telefono" name="telefono" placeholder="Telefono"><br>
                     <input type="text" id="correo" name="correo" placeholder="Correo Electronico"><br>
-                    <input type="textarea" id="mensaje" name="mensaje" placeholder="Envia un mensaje"><br>
-                </label>
+                    <input type="text" id="mensaje" name="mensaje" placeholder="Envia un mensaje"><br>
+                </div>
                 <button onclick="validar()">Enviar formulario</button>
             </form>
         </div>

@@ -15,18 +15,18 @@ body{
 /*Fuentes*/
 h1{
     font-family: 'Nunito', sans-serif;
-    font-size: 28;
+    font-size: 2.15384615em;
 }
 
 p{
     font-family: "Comfortaa";
-    font-size: 13;
+
 }
 
 #link a:link{
     color: #008EAB;
     font-family: "Comfortaa";
-    font-size: 13;
+
 }
 
 #link a:hover{
@@ -181,7 +181,7 @@ footer p{
     
 }
 
-#usuario-vertical label input{
+#usuario-vertical div input{
     background-color: transparent;
     border: 0;
     border-bottom: 0.2em solid white;
@@ -194,7 +194,7 @@ footer p{
 
 }
 
-#usuario-vertical label input::placeholder{
+#usuario-vertical div input::placeholder{
     color: white;
 }
 
@@ -272,7 +272,7 @@ footer p{
     display: block;
     min-width: 55%;
     font-family: 'Nunito', sans-serif;
-    font-size: 28;
+    font-size: 2.15384615em;
 }
 
 #marcobotones{
@@ -350,7 +350,7 @@ footer p{
 }
 
 
-#formulario label input{
+#formulario div input{
     background-color: transparent;
     border: 0;
     border-bottom: 0.2em solid gray;
@@ -396,7 +396,7 @@ footer p{
 
 }
 
-#login label input{
+#login div input{
     background-color: transparent;
     border: 0;
     border-bottom: 0.2em solid black;
@@ -408,7 +408,7 @@ footer p{
 
 }
 
-#login label input::placeholder{
+#login div input::placeholder{
     color: black;
 }
 
@@ -502,7 +502,11 @@ nav{
 
 /*----------RESOLUCIÓN MOBILE-------------*/
 
-@media screen and (max-width : 490px){ 
+@media screen and (max-width : 490px) { 
+    body{
+        margin: 0 auto;
+    }
+   
     header{
         display: block;
     }
@@ -530,6 +534,7 @@ nav{
     #usuario{
         display: block;
     }
+    
     #main{
         width: 100%;
     }
@@ -546,6 +551,8 @@ nav{
     }
     p{
         text-align: center;
+        padding-top: .5em;
+        padding-bottom: .5em;
     }
     footer{
         padding: 0;
