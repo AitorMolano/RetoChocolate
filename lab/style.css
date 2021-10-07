@@ -1,0 +1,903 @@
+/*Fuentes a importar*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-size: 13px;
+    font-family: Comfortaa;
+}
+
+body{
+    width: 100%;
+}
+/*Fuentes*/
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 28;
+}
+
+p{
+    font-family: "Comfortaa";
+    font-size: 13;
+}
+
+#link a:link{
+    color: #008EAB;
+    font-family: "Comfortaa";
+    font-size: 13;
+}
+
+#link a:hover{
+    font-family: "Comfortaa";
+    font-weight: bold;
+}
+
+#link a:visited{
+    color: #BC001A;
+}
+/*Fin de fuentes*/
+header{
+    width: 100%;
+}
+
+footer{
+    width: 99.3%;
+    height: 4em;
+    background-color: black;
+    display: inline-block;
+    padding: 5px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
+/*Imagenes completas*/
+
+#chocolates{
+    width: 100%;
+    border-bottom:0.5em solid #6B000E;
+    border-top:0.5em solid #6B000E;   
+    clear: both;
+}
+
+#chocolates img{
+    width: 100%;    
+    display: flex;
+}
+
+/*Boton arriba*/
+.ir-arriba{
+    position: fixed;
+    bottom:  1rem;
+    right: 1rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+  }
+
+.boton-ir-arriba{
+    width: 0rem;
+    height: 0rem;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
+}
+
+.boton-ir-arriba i{
+    position: absolute;
+    font-size: 4rem;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .boton-ir-arriba{
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    100%{
+        width: 6.6rem;
+        height: 6.6rem;       
+    }
+}
+
+/*Usuario-vertical*/
+#login-vertical{
+    padding: 0.8em;
+    margin-top: 2.5em;
+    height: 50%;
+    max-width:100%;
+}
+#usuario-vertical{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    color: white;
+}
+
+
+#usuario-vertical .boton-cerrar-vertical {
+    position: absolute;
+    top:    1rem;
+    left: 1rem;
+    font-size: 4rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 10%;
+    width: 10%;
+    text-align: center;
+
+}
+
+#usuario-vertical a {
+    display: block;
+    font-size: 120%;
+    color: white;
+    text-decoration: none;
+    padding-top: 2em;
+    
+}
+
+#usuario-vertical label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid white;
+    width: 80%;
+    outline: 0;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+    color: white;
+
+}
+
+#usuario-vertical label input::placeholder{
+    color: white;
+}
+
+#usuario-vertical input{
+    background: lightgrey;
+    border: 0.2em solid black;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 80%;
+
+}
+
+
+/*Controlador*/
+#controlador{
+    display: none;
+    width: 100%;
+    float: left;
+    border-bottom:0.5em solid #6B000E;
+
+}
+
+#marcoLuces{
+    display: grid;
+    width: 96%;
+    background-color: #F3E5AB;
+    border-bottom:0.5em solid #6B000E;
+    float: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2%;
+    text-align: center;
+}
+
+#botonRojo{
+    background-color: red;
+}
+
+#botonAmarillo{
+    background-color: yellow;
+}
+
+#botonVerde{
+    background-color: green;
+}
+
+#botonAzul{
+    background-color: blue;
+}
+
+#contCuadros{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 96%;
+    max-height: 50%;
+    text-align: center;
+    padding: 2%;
+}
+
+#tableta{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.conInterfaz{
+    display: block;
+    min-width: 46%;
+    float: left;
+    padding: 2%;
+}
+
+.conInterfaz h4{
+    display: block;
+    min-width: 55%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 28;
+}
+
+#marcobotones{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.conCuadrados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding: 2%;
+}
+
+.cuboBasico{
+    display: block;
+}
+
+.cuboBasico img{
+    width: 100%;
+    height: 100%;
+}
+
+#botonesMaster{
+    display: flex;
+    float: left;
+    background-color: #F3E5AB ;
+    width: 100%;
+    border-top: 0.5em solid #6B000E;
+}
+
+#conOnOff{
+    float: left;
+    padding: 2%;
+    margin-left: 10%;
+}
+
+#conOnOff label input{
+    width: 150%;
+    height: 150%;
+}
+
+#conControl{
+    display: flex;
+    float: left;
+    background-color: #E6CC5D;
+    margin-left: auto;
+}
+
+/*Contacto*/
+
+#formulario{
+    padding-top: 2em;
+    padding-left: 12em;
+    padding-right: 12em;
+    background-color: white;
+    clear: both;
+}
+
+
+#formulario label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid gray;
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    outline: 0;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+#formulario button{
+    background: lightgrey;
+    border: 0.2em solid gray;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+#mapa{
+    background-color: white;
+    padding-left: 15em;
+    padding-right: 15em;
+    text-align: center;
+}
+#mapa iframe{
+    padding: 0.5em;
+}
+
+#usuario{
+    display: none;
+    padding: 0.8em;
+    height: 60%;
+    margin: 15px;
+    float: right;
+}
+
+#login{
+    padding: 0.8em;
+    float: right;
+    height: 100%;
+    max-width: 20%;
+
+}
+
+#login label input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.2em solid black;
+    width: 80%;
+    outline: 0;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+
+}
+
+#login label input::placeholder{
+    color: black;
+}
+
+#login input{
+    background: lightgrey;
+    border: 0.2em solid black;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 80%;
+
+}
+
+#cerrar-sesion{
+    display: none;
+}
+
+#menu{
+    width: 4%;
+    padding: 0.8em;
+    float: left;
+}
+
+#menu-vertical {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+}
+
+#menu-vertical .boton-cerrar {
+    position: absolute;
+    top:    1rem;
+    right: 1rem;
+    font-size: 4rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 10%;
+    width: 10%;
+    text-align: center;
+
+}
+
+
+#menu-vertical  ul, #menu-vertical  li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+#menu-vertical  ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+#menu-vertical a {
+    display: block;
+    font-size: 120%;
+    color: white;
+    text-decoration: none;
+    padding-top: 2em;
+    
+}
+
+#menu-vertical li a:hover{
+    color:white;
+    border-bottom: 0.2em solid white;
+}
+
+#menu-vertical #maquina{
+    display: none;
+}
+
+nav{
+    box-sizing: content-box;
+    width: 100%;
+    min-height: 10%;
+    background-color: #F3E5AB ;
+    background-image: linear-gradient(#F3E5AB, #614015);
+
+}
+
+/*----------RESOLUCIÓN MOBILE-------------*/
+
+@media screen and (max-width : 490px){ 
+    header{
+        display: block;
+    }
+    #main img{
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        height: 100px;
+    }
+    #menu{
+        display: none;
+    }
+    #logo{
+    padding: 0.8em;
+    height: 100%;
+    min-width: 20%;
+    margin: auto;
+    display: block;
+    float: left;
+}
+    #login{
+        display: none;
+    }
+    #usuario{
+        display: block;
+    }
+    #main{
+        width: 100%;
+    }
+    #tresPartes{
+        float: left;
+        width: 100%;
+    }
+    #fotoGrande{
+        display: inline-block;
+    }
+    #fotoPeque{
+        margin-top: 100px;
+
+    }
+    p{
+        text-align: center;
+    }
+    footer{
+        padding: 0;
+    }
+    footer p{
+        margin: 10px;
+    }
+    #textoRectangulo{
+        display: none;
+    }
+    #mapa{
+        padding: 0;
+        max-width: 100%;
+    }
+    #formulario{
+        padding: 30px;
+    }
+    iframe{
+        max-width: 100%;
+        padding: 0;
+    }
+    #contCuadros{
+        display: block;
+    }
+    #tableta{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+        display: block;
+    }
+    #touchPad{
+        margin: 0 auto;
+        width: 100%;
+        float: left;
+        display: block;
+    }
+}
+
+/*----------RESOLUCIÓN TABLET-------------*/
+
+@media screen and (max-width : 980px) and (min-width :  490px){ 
+    body{
+        width: 100%;
+    }
+    
+    header{
+        width: 100%;
+    }
+    
+    footer{
+        padding: 0;
+    }
+    footer p{
+        margin: 10px;
+    }
+
+    nav{
+        box-sizing: content-box;
+        width: 100%;
+        height: 120px;
+        background-color: #F3E5AB ;
+        background-image: linear-gradient(#F3E5AB, #614015);
+        position: fixed;
+        display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 30%;
+          grid-auto-rows: minmax(120px, auto);
+    }
+
+    #logo{
+    padding: 0.8em;
+    height: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    grid-column: 2;
+    }
+    
+    #login{
+        display: none;
+    }
+    
+    #usuario{
+        display: inline-flex;
+        grid-column: 3;
+    }
+
+
+    #menu{
+        width:30%;
+        height: 30%;
+        padding: 0.8em;
+        float: left;
+        grid-column: 1;
+    }
+
+    #menu-vertical  ul, #menu-vertical  li{
+        margin-left: 1.4em;
+
+    }
+
+    #menu-vertical .boton-cerrar {
+        right: 1.4rem;
+       
+    }
+
+    #main{
+        width: 100%;
+        background-color: orchid;
+        display: block;
+    }
+    
+    #cuatroPartes{
+        width: 100%;
+        background-color: orange;
+        display: flex;
+    }
+    
+    #tresPartes{
+        width: 100%;
+        background-color: pink;
+        min-height: 100%;
+        margin-top: 120px;
+    }
+    #dosPartes{
+        width: 100%;
+        background-color: orange;
+        display: flex;
+    }
+    #fotoGrande{
+        width: 100%;
+        display: flex;
+        margin-top: 120px;
+        height: 100%;
+    }
+    
+    #fotoGrande img{
+        width: 100%;
+    }
+    
+    #textoRectangulo{
+        width: 100%;
+        min-height: 100%;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.2em solid #6B000E;
+    }
+    
+    #textoRectangulo p{
+        margin: auto 5%;
+    }
+
+    #tresPartes2{
+        max-width: 50%;
+        background-color: pink;
+        min-height: 100%;
+    }
+
+    #fotoGrande2{
+        max-width: 50%;
+        float: left;
+    }
+
+    #fotoGrande2 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #textoRectangulo2{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.2em solid #6B000E;
+    }
+
+    #textoRectangulo2 p{
+        margin: auto 5%;
+    }
+
+    #mapa{
+        padding: 0;
+    }
+    #formulario{
+        padding: 30px;
+    }
+
+
+    #fotoPeque{
+        display: none;
+    }
+
+    #textoPeque{
+        display: none;
+    }
+
+    #fotoPeque2{
+        display: none;
+    }
+
+    #textoPeque2{
+        display: none;
+    }
+}
+/*----------RESOLUCIÓN PC-------------*/
+    @media screen and (min-width: 980px){
+
+#logo{
+    padding: 0.8em;
+    height: 170px;
+    max-width: 20%;
+    margin: 0 auto;
+    display: block;
+}
+
+#usuario-vertical{
+    display: none;
+}
+
+    #main{
+    width: 100%;
+    background-color: orchid;
+}
+
+#cuatroPartes{
+    width: 100%;
+    background-color: orange;
+    float: left;
+    display: flex;
+}
+
+#tresPartes{
+    width: 50%;
+    float: left;
+    background-color: pink;
+    min-height: 100%;
+    border-bottom: 0.2em solid #6B000E;
+}
+
+#fotoGrande{
+    width: 50%;
+    float: left;
+    display: flex;
+}
+
+#fotoGrande img{
+    width: 100%;
+
+}
+#textoRectangulo{
+    width: 100%;
+    background-color: white;
+    float: left;
+    text-align: center;
+    min-height: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.2em solid #6B000E;
+}
+
+#textoRectangulo p{
+    margin: auto 5%;
+}
+
+#fotoPeque{
+    width: 50%;
+    float: left;
+    display: flex;
+    min-height: 50%;
+
+}
+
+#fotoPeque img{
+    width: 100%;
+}
+
+#textoPeque{
+    width: 50%;
+    float: left;
+    background-color: white;
+    text-align: center;
+    min-height: 50%;
+    max-height: 50%;
+    display: flex;
+    align-items: center;
+
+}
+
+#textoPeque p{
+    margin: auto 10%;
+    max-height: 50%;
+    display: flex;
+    
+}
+
+#dosPartes{
+    width: 100%;
+    background-color: orange;
+    float: left;
+    display: flex;
+    border-bottom: 0.2em solid #6B000E;
+}
+
+#fotoGrande2{
+    width: 50%;
+    float: left;
+    display: flex;
+
+}
+#tresPartes2{
+    width: 50%;
+    float: right;
+    background-color: pink;
+    min-height: 100%;
+    border-bottom: 0.2em solid #6B000E;
+}
+
+#fotoGrande2 img{
+    width: 100%;
+}
+
+#textoRectangulo2{
+    width: 100%;
+    background-color: white;
+    float: left;
+    text-align: center;
+    min-height: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.2em solid #6B000E;
+}
+
+#textoRectangulo2 p{
+    margin: auto 5%;
+}
+
+#fotoPeque2{
+    width: 50%;
+    float: right;
+    display: flex;
+    min-height: 50%;
+
+}
+
+#fotoPeque2 img{
+    width: 100%;
+}
+
+#textoPeque2{
+    width: 50%;
+    float: left;
+    background-color: white;
+    text-align: center;
+    min-height: 50%;
+    max-height: 50%;
+    display: flex;
+    align-items: center;
+
+}
+
+#textoPeque2 p{
+    margin: auto 10%;
+    max-height: 50%;
+    display: flex;
+    
+}
+
+    }

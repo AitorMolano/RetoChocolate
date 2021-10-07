@@ -1,0 +1,130 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+	box-sizing: border-box;
+    font-size: 13px;
+    font-family: Conforta;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0.8%;
+    background-color: #E6CC5D ;
+}
+
+header{
+    height: 20%;
+    width: 100%;
+    margin-bottom: 0.8%;
+    margin-top: 0.8%;
+}
+
+main{
+    height: 70%;
+    width: 100%;
+    
+}
+
+footer{
+    padding: 0.8%;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    clear: both;
+    margin-top: 0.8%;
+}
+
+#foto2{
+    width: 100%;
+
+    margin: auto;
+    display: block;
+}
+
+#foto3{
+    padding: 0.8em;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+#logo{
+    padding: 0.8em;
+    height: 100%;
+    width: 20%;
+    margin: auto;
+    display: block;
+}
+
+
+.vainilla{
+    position: relative;
+    z-index: 9;
+    height: 100%;
+    width: 100%;
+    background-color: #614015 ;
+}
+
+.vainilla:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0; 
+    right:0;
+    bottom: 50%;
+    left: 0;
+    background-color: #F3E5AB	;
+}
+
+.part1{
+    float: left;
+    height: 100%;
+    width:50% ;
+    background-color: white;
+}
+
+.texto1 {
+    padding: 0.8%;
+    width: 100%;
+    height: 50%;
+
+}
+
+.ppart1{
+    float: right; 
+    height: 100%;
+    width:50% ;
+    border-left: 0.3em solid #6B000E;
+    background-color: white;
+}
+
+.foto2{
+    padding: 0.8%;
+    float: left;
+    width: 50%;
+    height: 50%;
+    border-top: 0.3em solid #6B000E;
+}
+
+
+.texto2{
+    height: 50%;
+    padding: 0.8%;
+    float: right;
+    width: 50%;
+    background-color: cornflowerblue;
+    border-top: 0.3em solid #6B000E;
+    border-left: 0.3em solid #6B000E;
+}
+
+
+@media screen and (max-width : 980px){ 
+
+}
+
+@media screen and (max-width : 480px){ 
+    
+}
