@@ -34,7 +34,7 @@ function crearFormulario(){
 		data: $("#formularioMarcha").serialize()
 	});
 	
-	console.log(:="mis_datos".martxa:);
+//	console.log(:="mis_datos".martxa:);
 }
 
 function leerCiclo(){
@@ -63,6 +63,7 @@ function clickOn(){
 	crearFormulario();
 	
 	/*
+    Version2
 	var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function(){
 			if(xmlhttp.readyState === 4 &&
@@ -163,94 +164,64 @@ function setUpControlador(){
     startControlador();
 
 }
-//mostrar index
-function mostrarMenu() {
-    document.getElementById("menu-vertical").style.width = "30%";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("menu").style.display = "none";
-};
+function crearFormPatron1(){
+	let formPatron = document.createElement("form");
+	formMarcha.setAttribute("id", "formularioPatron");
+	formPatron.innerHTML = "<!-- AWP_In_Variable Name='\"mis_datos\"'--><input name='\"mis_datos\".marrazkiAuto' value=0/>"
+    document.body.append(formPatron);
+	
+	$.ajax({
+		type: "POST",
+		url: $("#formularioPatron").attr('action'),
+		data: $("#formularioPatron").serialize()
+	});
+}
 
-//ocultar index
-function ocultarMenu() {
-    document.getElementById("menu-vertical").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("menu").style.display = "inline";
-};
+function clickPatron1(){
 
-//mostrar barra usu
-function mostrarUsuario() {
-    document.getElementById("usuario-vertical").style.width = "40%";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("menu").style.display = "none";
-};
+    patron1.style.backgroundColor="green";
+    patron2.style.backgroundColor="gray";
 
-//ocultar barra usu
-function ocultarUsuario() {
-    document.getElementById("usuario-vertical").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("menu").style.display = "inline";
-    if(screen.width <= 480 ){
-        document.getElementById("menu").style.display = "none";
+	crearFormPatron1();
+	
+    var luces = ajax_get_json("./luces.html");
+
+    for( var color in luces){
+        if(luces[color] == 1){
+            document.getElementById(color).opacity(1);
+        }
     }
-    else{
-        document.getElementById("menu").style.display = "inline";
-    };
-};
-//validar formulario
-function validar() {
-    try{    
-        let nombre = document.getElementById("nombre").value;
-        let telefono = document.getElementById("telefono").value;
-        let correo = document.getElementById("correo").value;
-        let mensaje = document.getElementById("mensaje").value;
+	console.log(JSON.parse(luces)); 
+}
 
-        let exNombre = new RegExp(/^[A-Z]{1}[a-z]+$/);
-        let exTelefono = new RegExp(/^[0-9]{9}$/);
-        let exCorreo = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/);
+//____
 
-        if(!exNombre.test(nombre)){
-            throw "El nombre esta vacio o es incorrecto";
-        }
-        if(!exTelefono.test(telefono)){
-            throw "El telefono esta vacio o es incorrecto";
-        }
-        if(!exCorreo.test(correo)){
-            throw "El correo esta vacio o es incorrecto";
-        }
+function crearFormPatron2(){
+	let formPatron = document.createElement("form");
+	formMarcha.setAttribute("id", "formularioPatron");
+    formPatron.innerHTML = "<!-- AWP_In_Variable Name='\"mis_datos\"'--><input name='\"mis_datos\".marrazkiAuto' value=1/>"
+    document.body.append(formPatron);
+	
+	$.ajax({
+		type: "POST",
+		url: $("#formularioPatron").attr('action'),
+		data: $("#formularioPatron").serialize()
+	});
+}
 
-        if(mensaje == ""){
-            throw "Debe escribir un mensaje "
-        }
+function clickPatron2(){
+
+    patron2.style.backgroundColor="green";
+    patron1.style.backgroundColor="gray";
     
-    var img=document.createElement("img");
-    img.src="logochoco2.png";
-    let cuerpo = " Hola buenas. \nEl cliente con el nombre " + nombre + " con telefono " + telefono + " y correo electronico " + correo + " desea mandar el siguiente mensaje:\n \"" + mensaje + "\"\n Un saludo" + logo;
+	crearFormPatron2();
+	
+    var luces = ajax_get_json("./luces.html");
 
-    alert("Se a enviado correctamente");
-    window.open('mailto:messa@gmail.com?body=' + cuerpo);
+    for( var color in luces){
+        if(luces[color] == 1){
+            document.getElementById(color).opacity(1);
+        }
     }
-    catch(err){
-        alert(err);
-    } 
-};
-//Boton arriba
-window.onscroll = function(){
-    if(document.documentElement.scrollTop>100){
-        document.querySelector('.ir-arriba')
-        .classList.add('show');
-    }
-    else{
-        document.querySelector('.ir-arriba')
-        .classList.remove('show');
-    }
-};
-
-document.querySelector('.ir-arriba')
-.addEventListener('click', () =>{
-    window.scrollTo({
-        top:0,
-        behavior: 'smooth'
-    });
-});
-
-
+	console.log(JSON.parse(luces)); 
+}
