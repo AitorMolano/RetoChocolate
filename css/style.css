@@ -4,7 +4,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-size: 13px;
     font-family: Comfortaa;
 }
@@ -181,7 +181,8 @@ footer p{
     
 }
 
-#usuario-vertical div input{
+
+#usuario-vertical #cuerpo-vertical input{
     background-color: transparent;
     border: 0;
     border-bottom: 0.2em solid white;
@@ -206,6 +207,7 @@ footer p{
     width: 80%;
 
 }
+
 
 
 /*Controlador*/
@@ -503,9 +505,7 @@ nav{
 /*----------RESOLUCIÓN MOBILE-------------*/
 
 @media screen and (max-width : 490px) { 
-    body{
-        margin: 0 auto;
-    }
+
    
     header{
         display: block;
