@@ -1,4 +1,3 @@
-
 //mostrar index
 function mostrarMenu() {
     document.getElementById("menu-vertical").style.width = "30%";

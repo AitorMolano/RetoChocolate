@@ -221,7 +221,7 @@ footer p{
 
 #marcoLuces{
     display: grid;
-    width: 96%;
+    width: 100%;
     background-color: #F3E5AB;
     border-bottom:0.5em solid #6B000E;
     float: left;
@@ -232,19 +232,20 @@ footer p{
 }
 
 #botonRojo{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.3);
+
 }
 
 #botonAmarillo{
-    background-color: yellow;
+    background-color: rgba(255, 233, 0, 0.3);
 }
 
 #botonVerde{
-    background-color: green;
+    background-color: rgba(0, 255, 0 , 0.3);
 }
 
 #botonAzul{
-    background-color: blue;
+    background-color: rgba(0, 0, 255 , 0.3);
 }
 
 #contCuadros{
@@ -252,7 +253,6 @@ footer p{
     background-color: white;
     display: flex;
     align-items: center;
-    width: 96%;
     max-height: 50%;
     text-align: center;
     padding: 2%;
